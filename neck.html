@@ -183,10 +183,6 @@ header {
     margin-left: auto; /* Push to the right */
   }
 }
-
-
-
-
 /* Search bar container */
 .search-bar {
   position: relative;
@@ -196,7 +192,6 @@ header {
    font-family: spantax;
 
 }
-
 /* Input field */
 .search-bar input[type="text"] {
   width: 100%;
@@ -285,9 +280,6 @@ header {
 .search-suggestions::-webkit-scrollbar-track {
   background: #f9f9f9;
 }
-
-
-
 /* Responsive styles */
 @media (max-width: 480px) {
   .search-bar {
@@ -613,12 +605,7 @@ header {
   .wishlist-notification i {
     color: #d4af37;
   }
-
-
-
-
-
-     .wishlist-icon-card {
+.wishlist-icon-card {
             position: absolute;
             top: 10px;
             right: 10px;
@@ -656,10 +643,7 @@ header {
   display: inline-block;
   transition: all 0.3s ease;
 }
-
-
-
-        .wishlist-icon-card.active {
+.wishlist-icon-card.active {
             background: rgba(255, 71, 87, 0.1);
         }
 
@@ -679,11 +663,7 @@ header {
     font-size: 13px;
   }
 }
-
-
-
-
-  #page-header{
+#page-header{
   background-image: url(IMAGES/Necklaces-BANNER.png);
   width: 100%;
   height: 40vh;
@@ -754,9 +734,6 @@ font-weight: 600;
     transform: scale(1.05) rotate(0deg);
     z-index: 2;
   }
-
-  
-
 .image-highlight {
     width: 100%;
     padding: 10px 20px;
@@ -814,9 +791,7 @@ font-weight: 600;
       border-radius: 10px;
     }
   }
-
-
- footer {
+footer {
   background-color: #020202;
   font-family: spantax;
 }
@@ -952,11 +927,6 @@ font-weight: 600;
     display: none;
   }
 }
-
-
-
-
-
 #view-more-btn {
     padding: 10px 20px;
     font-size: 16px;
@@ -1057,10 +1027,7 @@ font-weight: 600;
     }
     
     /* Responsive adjustments */
- 
-    
-  
-    @media (max-width: 768px) {
+ @media (max-width: 768px) {
   #page-header {
     height: 250px; /* Reduce height for smaller screens */
     padding: 20px 10px;
@@ -1103,15 +1070,8 @@ font-weight: 600;
     font-size: 0.8rem;
   }
 }
-
-
-
-  </style>
-
-
-
- 
- <!-- HEADER -->
+</style>
+  <!-- HEADER -->
 <header id="header">
   <!-- TOP BAR -->
   <div class="header-top-bar">
@@ -1214,13 +1174,6 @@ font-weight: 600;
     document.querySelector(".nav-links").classList.toggle("active");
   });
 </script>
-
-
-
-
-
-
-
 <!-- Promotional Banner Section with Background Video -->
 <section id="page-header">
     <div class="video-background">
@@ -1475,18 +1428,6 @@ font-weight: 600;
     </div>
   </div>
 </footer>
-
-
-
-
-
-
-
-
-
-
-
-
 <script>
 class WishlistManager {
     constructor() {
@@ -1546,8 +1487,7 @@ class WishlistManager {
             icon.classList.add('far');
         }
     }
-
-    updateWishlistIcons() {
+updateWishlistIcons() {
         const wishlist = this.getWishlist();
         const wishlistIds = wishlist.map(item => item.id);
 
@@ -1557,8 +1497,7 @@ class WishlistManager {
             this.updateIconState(icon, isInWishlist);
         });
     }
-
-    updateWishlistBadge() {
+updateWishlistBadge() {
         const wishlist = this.getWishlist();
         const count = wishlist.length;
         const badge = document.querySelector('.wishlist-count');
@@ -1673,6 +1612,5 @@ function updateWishlistCount() {
     }
 }
 </script>
-
 </body>
 </html>
