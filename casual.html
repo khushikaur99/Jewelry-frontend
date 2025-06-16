@@ -727,16 +727,31 @@ font-weight: 600;
   transition: color 0.2s ease;
 }
 
-.social-icons {
+/* Ensure the FOLLOW section is vertically aligned */
+.footer-section .social-icons {
   display: flex;
   gap: 12px;
-  text-align: center;
+  align-items: center;
+  margin-top: 8px; /* Adjust this to control spacing from "FOLLOW" */
+  margin-right: 130px;
+  padding: 0;
+  list-style: none;
 }
 
-.social-icons li a {
+/* Make icons perfectly circular and centered */
+.footer-section .social-icons li a {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   font-size: 18px;
-  margin-right: 20px;
+  transition: all 0.3s ease;
 }
+
 
 .footer-bottom {
   border-top: 1px solid #333;
@@ -1284,9 +1299,8 @@ font-weight: 600;
           <div class="footer-section">
             <h3>Follow</h3>
             <ul class="social-icons">
-              <li><a href="https://instagram.com/palmonas" target="_blank"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="https://facebook.com/palmonas" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="https://pinterest.com/palmonas" target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
+              <li><a href="" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
             </ul>
           </div>
         </div>
