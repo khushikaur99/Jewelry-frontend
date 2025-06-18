@@ -4,7 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Details</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=spantax:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"/>
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 
+  <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+  <!--ICON-->
+<link rel="shortcut icon" href="IMAGES/01.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
     <!--ICON-->
 <link rel="shortcut icon" href="IMAGES/01.png">
  <style>
@@ -307,10 +326,78 @@
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
+
+ .header-icons {
+    position: fixed;
+    top: 60px;
+    right: 90px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+    background: rgba(255,255,255,0.9);
+    padding: 10px 15px;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .icon-link {
+    position: relative;
+    display: flex;
+    color: #333;
+    text-decoration: none;
+    padding: 5px;
+  }
+  
+  .icon-link svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff3b30;
+    color: white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+
+
   </style>
 </head>
 <body>
+
+ 
+
+  <!-- Product Container -->
   <div class="container">
+   <!-- Header Icons Section -->
+<div class="header-icons">
+  <a href="wishlist.html" class="icon-link wishlist-icon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+    </svg>
+    <span class="badge wishlist-badge">0</span>
+  </a>
+  <a href="cart.html" class="icon-link cart-icon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="9" cy="21" r="1"></circle>
+      <circle cx="20" cy="21" r="1"></circle>
+      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+    </svg>
+    <span class="badge cart-badge">0</span>
+  </a>
+
+</div>
     <!-- Left: Image Section -->
     <div class="image-section">
       <img id="product-image" src="" alt="Product Image" class="main-image">
@@ -361,16 +448,16 @@
           <span id="cart-btn-text">Add to Cart</span>
         </button>
         <button class="buy-now" id="buy-now-btn">Buy Now</button>
-   <button class="wishlist-btn" id="wishlist-btn">
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="black" stroke="currentColor">
-    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-  </svg>
-  Wishlist
-</button>
-
+        <button class="wishlist-btn" id="wishlist-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="black" stroke="currentColor">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          Wishlist
+        </button>
       </div>
     </div>
   </div>
+</body>
 
 <script>
     // Product data
@@ -2832,6 +2919,60 @@
       }
     }
 </script>
-
+<!-- JavaScript to handle badge updates -->
+<script>
+  // Initialize counters from localStorage or set to 0
+  let wishlistCount = localStorage.getItem('wishlistCount') || 0;
+  let cartCount = localStorage.getItem('cartCount') || 0;
+  
+  // Update badge displays
+  document.querySelector('.wishlist-badge').textContent = wishlistCount;
+  document.querySelector('.cart-badge').textContent = cartCount;
+  
+  // Function to update wishlist
+  function updateWishlist() {
+    wishlistCount++;
+    localStorage.setItem('wishlistCount', wishlistCount);
+    document.querySelector('.wishlist-badge').textContent = wishlistCount;
+    animateBadge('.wishlist-badge');
+  }
+  
+  // Function to update cart
+  function updateCart() {
+    cartCount++;
+    localStorage.setItem('cartCount', cartCount);
+    document.querySelector('.cart-badge').textContent = cartCount;
+    animateBadge('.cart-badge');
+  }
+  
+  // Add animation to badge when updated
+  function animateBadge(selector) {
+    const badge = document.querySelector(selector);
+    badge.style.transform = 'scale(1.5)';
+    setTimeout(() => {
+      badge.style.transform = 'scale(1)';
+    }, 300);
+  }
+  
+  // Connect to your existing buttons
+  document.getElementById('wishlist-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    updateWishlist();
+    // Your existing wishlist functionality here
+  });
+  
+  document.getElementById('add-to-cart-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    updateCart();
+    // Your existing add to cart functionality here
+  });
+  
+  document.getElementById('buy-now-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    updateCart();
+    // Redirect to checkout or your existing buy now functionality
+    window.location.href = 'cart.html';
+  });
+</script>
 </body>
 </html>
