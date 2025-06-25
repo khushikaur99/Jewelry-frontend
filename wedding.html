@@ -179,7 +179,51 @@ header {
 }
 
 
-
+  .user-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .user-icon {
+    display: inline-block;
+    padding: 10px;
+    color: #333;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+  
+  .user-icon:hover {
+    color: #007bff; /* Change to your preferred hover color */
+    transform: scale(1.1);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .user-dropdown:hover .dropdown-content {
+    display: block;
+  }
 
 
 /* Search bar container */
@@ -1047,8 +1091,20 @@ font-weight: 600;
   <i class="fas fa-check-circle"></i>
   <span class="notification-message">Item added to wishlist</span>
 </div>
-      <a href="login.html"><i class="fa fa-user"></i></a>
-      <a href="cart.html"><i class="fa fa-shopping-cart"></i><span id="cart-count">0</span></a>
+<!--LOGIN / MYPROFILE-->
+<div class="user-dropdown">
+  <a href="#" class="user-icon"><i class="fa fa-user"></i></a>
+  <div class="dropdown-content">
+    <a href="profile.html">My Profile</a>
+    <a href="login.html">Login</a>
+    <!-- Alternatively for logout when user is logged in:
+    <a href="profile.html">My Profile</a>
+    <a href="logout.html">Logout</a>
+    -->
+  </div>
+</div>  
+
+<a href="cart.html"><i class="fa fa-shopping-cart"></i><span id="cart-count">0</span></a>
     </div>
   </nav>
 
