@@ -540,7 +540,7 @@ header {
   position: relative;
   width: 100%;
   max-width: 400px; /* Adjust based on your layout */
-  margin: 1px auto;
+  margin: 5px auto;
   font-family: spantax;
 }
 
