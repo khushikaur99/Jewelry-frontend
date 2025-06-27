@@ -63,7 +63,7 @@
 <header id="header">
   <!-- TOP BAR -->
   <div class="header-top-bar">
-    <span>Welcome To OY JEWELS Store</span>
+    <span>Welcome To OY JEWELLS Store</span>
   </div>
 
 
@@ -400,22 +400,56 @@ MAIN BANNER
   
 </section>
 
-<br><br><br><br>
+
 <section id="section7" style="background-image: url(IMAGES/bgq1.jpg); background-size: cover; height: 70%;">
   <div class="sticky-container">  
-      <div class="tagline"><b>Handpicked gifts. Heartfelt moments.</b></div>
-    </header>
-  
-    <section class="sticky-container">
-      <div class="sticky-note">💖 “Absolutely LOVE this product!”</div>
-      <div class="sticky-note">🚚 “Shipping was super fast — arrived 2 days early.”</div>
-      <div class="sticky-note">🎁 “The packaging was beautiful and thoughtful!”</div>
-      <div class="sticky-note">💬 “Customer service was quick & friendly.”</div>
-      <div class="sticky-note">🌟 “Will definitely order again for birthdays!”</div>
-      
-    </section>
+    <div class="tagline"><b>Handpicked gifts. Heartfelt moments.</b></div>
+  </div>
+
+  <div class="sticky-carousel">
+    <button class="carousel-arrow prev" aria-label="Previous testimonial">&#10094;</button>
+    
+    <div class="sticky-container">
+      <div class="sticky-note active">💖 "Absolutely LOVE this product!"</div>
+      <div class="sticky-note">🚚 "Shipping was super fast — arrived 2 days early."</div>
+      <div class="sticky-note">🎁 "The packaging was beautiful and thoughtful!"</div>
+      <div class="sticky-note">💬 "Customer service was quick & friendly."</div>
+      <div class="sticky-note">🌟 "Will definitely order again for birthdays!"</div>
+    </div>
+    
+    <button class="carousel-arrow next" aria-label="Next testimonial">&#10095;</button>
+  </div>
 </section>
-<br><br><br>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const notes = document.querySelectorAll('.sticky-note');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  let currentIndex = 0;
+  
+  // Show only on mobile
+  if (window.innerWidth <= 768) {
+    updateCarousel();
+    
+    prevBtn.addEventListener('click', function() {
+      currentIndex = (currentIndex - 1 + notes.length) % notes.length;
+      updateCarousel();
+    });
+    
+    nextBtn.addEventListener('click', function() {
+      currentIndex = (currentIndex + 1) % notes.length;
+      updateCarousel();
+    });
+  }
+  
+  function updateCarousel() {
+    notes.forEach((note, index) => {
+      note.classList.toggle('active', index === currentIndex);
+    });
+  }
+});
+</script>
+
 <footer>
   <div class="footer-wrapper">
     <div class="footer-container">
