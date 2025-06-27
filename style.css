@@ -251,7 +251,7 @@ header {
 }
 
 .logo img {
-  height: 80px;
+  height: 75px;
   margin-left: 50%;
   margin-top: 18%;
 }
@@ -536,11 +536,13 @@ header {
 }
 
 /* Search bar container */
+
+
 .search-bar {
   position: relative;
   width: 100%;
   max-width: 400px; /* Adjust based on your layout */
-  margin: 5px auto;
+  margin: 1px auto;
   font-family: spantax;
 }
 
