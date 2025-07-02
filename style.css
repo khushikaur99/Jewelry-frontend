@@ -1144,7 +1144,34 @@ header {
       font-size: 13px;
     }
   }
+/* Overall Hero Slider Styling */
+.hero-slider {
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+  position: relative;
+}
 
+/* Wrapper ensures the slide is centered and responsive */
+.slider-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* Single Slide Styling */
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Optional: Make it full height on desktop */
+@media (min-width: 768px) {
+  .slide img {
+    height: 600px;
+  }
+}
 
 
 .section4{
