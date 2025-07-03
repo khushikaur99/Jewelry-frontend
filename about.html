@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Creative Solutions</title>
+    <title>About Us | OY Jewells</title>
       <!--ICON-->
 <link rel="shortcut icon" href="IMAGES/01.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
     <style>
         :root {
             --primary: rgb(236, 186, 115);
-            --secondary: rgb(241, 209, 165);
+            --secondary: rgb(245, 196, 127);
             --accent: #000000;
             --light: #f8f9fa;
             --dark: #212529;
@@ -308,14 +308,54 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .why-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.why-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  max-width: 600px;
+}
+
+.why-list li {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  
+  border-radius: 4px;
+  font-size: 1.1rem;
+}
+
+.centered-message {
+  text-align: center;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-size: 22px;
+}
+
+.centered-message p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.centered-message .tagline {
+  font-size: 1.2rem;
+  color: var(--primary);
+  font-weight: 500;
+}
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
             <h1>Our Story</h1>
-            <p class="tagline">Where passion meets innovation to create meaningful solutions that inspire and transform</p>
-            <a href="#contact" class="btn">Get in Touch</a>
+            <p class="tagline">Where Elegance Meets Emotion</p>
+            <a href="contact.html" class="btn">Get in Touch</a>
         </div>
     </header>
     
@@ -323,32 +363,32 @@
         <section class="about-section">
             <div class="about-content animate-on-scroll">
                 <h2 class="section-title">Who We Are</h2>
-                <p class="mission-statement">Founded in 2015, we are a collective of designers, developers, and strategists dedicated to crafting exceptional digital experiences that drive real results.</p>
-                <p>Our journey began in a small co-working space with just three people and a shared vision. Today, we've grown into an award-winning agency with team members across four countries, but we've never lost our startup spirit or commitment to excellence.</p>
-                <p>We believe in the power of design thinking combined with technical excellence to solve complex problems in simple, elegant ways. Every project we undertake is approached with fresh eyes and a dedication to pushing boundaries.</p>
+                <p class="mission-statement">Welcome to OY Jewells — a fine western jewellery brand created to celebrate the art of self-expression, one shimmering moment at a time.</p>
+                <p>Born from a passion for minimal elegance and modern sophistication, OY Jewells brings you timeless jewellery designed for today's confident, graceful woman. Every design reflects a balance of simplicity and statement — crafted not just to be worn, but to be felt.</p>
+                <p>Our jewellery is more than metal and stone — it's an extension of your story. Whether it's a delicate bracelet worn to a meeting, a bold ring shared on a milestone evening, or earrings that dance with your every step, we design with intention — to make Every Movement Special.</p>
           
             
-           <!-- <h2 class="section-title animate-on-scroll">Our Approach</h2>
-            <div class="stats">
-                <div class="stat-item animate-on-scroll">
-                    <div class="stat-number" data-count="150">0</div>
-                    <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat-item animate-on-scroll">
-                    <div class="stat-number" data-count="98">0</div>
-                    <div class="stat-label">Client Satisfaction</div>
-                </div>
-                <div class="stat-item animate-on-scroll">
-                    <div class="stat-number" data-count="25">0</div>
-                    <div class="stat-label">Team Members</div>
-                </div>
-                <div class="stat-item animate-on-scroll">
-                    <div class="stat-number" data-count="7">0</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-            </div>--> 
+            <h2 class="section-title animate-on-scroll">Our Tagline: "Every Movement Special"</h2>
+            <p>At OY Jewells, we believe that true beauty lies in the small, fleeting moments — a gentle smile, a spontaneous laugh, the sway of hair, the turn of a wrist. Our tagline, "Every Movement Special," is a tribute to these little gestures that speak volumes.</p>
+            <p>Our jewellery is crafted to move with you — catching the light, turning heads, and amplifying your presence without ever saying a word. From boardrooms to brunches, from solo travels to shared memories — our pieces are made to shine through life's every movement.</p>
             
-      <h2 class="section-title animate-on-scroll">Meet the Team</h2>
+     <h2 class="section-title animate-on-scroll">Why OY Jewells?</h2>
+<div class="why-container animate-on-scroll">
+  <ul class="why-list">
+    <li>💫 Modern Aesthetic with timeless elegance</li>
+    <li>💎 Ethically Crafted with high-quality metals & stones</li>
+    <li>✨ Designed for Everyday Glamour and special occasions</li>
+    <li>🌍 Made for Women Who Move the World</li>
+  </ul>
+
+  
+</div>
+      <br><br>
+     <div class="centered-message animate-on-scroll">
+  <p>Join the OY Jewells journey — where style meets soul, and every moment becomes a memory in the making.</p>
+  <p class="tagline"><strong>OY Jewells — Every Movement Special.</strong></p>
+</div>
+<br><br>
 <div class="team">
     <div class="team-member animate-on-scroll">
         <div class="member-info">
@@ -363,13 +403,44 @@
             <span class="member-role">Founder & CEO</span>
         </div>
     </div>
-    
-    </div>
-   
 </div>
 
-
-
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible', 'animated');
+                    
+                    // Animate counting numbers if present
+                    const statNumber = entry.target.querySelector('.stat-number');
+                    if (statNumber) {
+                        const target = parseInt(statNumber.getAttribute('data-count'));
+                        const duration = 2000;
+                        const step = target / (duration / 16);
+                        
+                        let current = 0;
+                        const timer = setInterval(() => {
+                            current += step;
+                            if (current >= target) {
+                                clearInterval(timer);
+                                current = target;
+                            }
+                            statNumber.textContent = Math.floor(current);
+                        }, 16);
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        animateElements.forEach(element => {
+            observer.observe(element);
+        });
+    });
+</script>
 
 <script>
     // Simple scroll animation trigger
@@ -389,49 +460,41 @@
         });
     });
 </script>
-            </div>
-        </section>
-    </div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+    // Animation on scroll
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
     
-  
-
-
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script>
-        // Animation on scroll
-        const animateElements = document.querySelectorAll('.animate-on-scroll');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                
+                // Animate counting numbers
+                if (entry.target.querySelector('.stat-number')) {
+                    const statNumber = entry.target.querySelector('.stat-number');
+                    const target = parseInt(statNumber.getAttribute('data-count'));
+                    const duration = 2000;
+                    const step = target / (duration / 16);
                     
-                    // Animate counting numbers
-                    if (entry.target.querySelector('.stat-number')) {
-                        const statNumber = entry.target.querySelector('.stat-number');
-                        const target = parseInt(statNumber.getAttribute('data-count'));
-                        const duration = 2000;
-                        const step = target / (duration / 16);
-                        
-                        let current = 0;
-                        const timer = setInterval(() => {
-                            current += step;
-                            if (current >= target) {
-                                clearInterval(timer);
-                                current = target;
-                            }
-                            statNumber.textContent = Math.floor(current);
-                        }, 16);
-                    }
+                    let current = 0;
+                    const timer = setInterval(() => {
+                        current += step;
+                        if (current >= target) {
+                            clearInterval(timer);
+                            current = target;
+                        }
+                        statNumber.textContent = Math.floor(current);
+                    }, 16);
                 }
-            });
-        }, {
-            threshold: 0.1
+            }
         });
-        
-        animateElements.forEach(element => {
-            observer.observe(element);
-        });
-    </script>
-</body>
-</html>
+    }, {
+        threshold: 0.1
+    });
+    
+    animateElements.forEach(element => {
+        observer.observe(element);
+    });
+</script>
