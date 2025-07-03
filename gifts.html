@@ -585,18 +585,34 @@ header {
 
   
 }
-  #page-header {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  margin-top: 3px;
-}
 
-.image-background img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
+  /* Banner Container Styling */
+  #main-banner {
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .banner-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  /* Responsive adjustments (optional) */
+  @media screen and (max-width: 768px) {
+    #main-banner {
+      margin-top: 6px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    #main-banner {
+      margin-top: 4px;
+    }
+  }
 
  .section7{
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
@@ -1077,12 +1093,15 @@ footer {
   });
 </script>
 
-<!-- Promotional Banner Section with Background Image -->
-<section id="page-header">
-  <div class="image-background">
-    <img src="IMAGES/gifts banner.jpg" alt="Special offers background" style="width: 100%; height: auto; display: block;">
+
+<!-- Responsive Banner Section -->
+<section id="main-banner">
+  <div class="banner-container">
+    <img src="IMAGES/gifts banner.jpg" alt="Stunning Bracelets - Special Prices" />
   </div>
 </section>
+
+
 <section id="product1" class="section4">
   <div class="pro-container" id="product-list"></div>
   <div style="text-align: center; margin-top: 20px;">
