@@ -1,153 +1,2038 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OY JEWELLS</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f8f8f8;
-            color: #333;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .orders-header {
-            text-align: center;
-            margin: 40px 0;
-        }
-        
-        .orders-header h1 {
-            font-size: 32px;
-            color: #222;
-            margin-bottom: 10px;
-        }
-        
-        .orders-header p {
-            color: #666;
-            font-size: 16px;
-        }
-        
-        .empty-orders {
-            background-color: white;
-            border-radius: 8px;
-            padding: 60px 20px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
-        }
-        
-        .empty-orders-icon {
-            font-size: 60px;
-            color: #d1d1d1;
-            margin-bottom: 20px;
-        }
-        
-        .empty-orders h2 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: #444;
-        }
-        
-        .empty-orders p {
-            color: #777;
-            max-width: 500px;
-            margin: 0 auto 30px;
-            line-height: 1.6;
-        }
-        
-        .shop-btn {
-            display: inline-block;
-            background-color: #ff3e6c;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        
-        .shop-btn:hover {
-            background-color: #e0355c;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(255, 62, 108, 0.2);
-        }
-        
-        .order-help {
-            background-color: #f0f7ff;
-            border-radius: 8px;
-            padding: 30px;
-            margin-top: 40px;
-        }
-        
-        .order-help h3 {
-            color: #2a5885;
-            margin-bottom: 15px;
-        }
-        
-        .order-help p {
-            color: #555;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-        
-        .contact-link {
-            color: #2a5885;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        @media (max-width: 768px) {
-            .orders-header h1 {
-                font-size: 28px;
-            }
-            
-            .empty-orders {
-                padding: 40px 15px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders | Jewelry Store</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/user-order/order.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="shortcut icon" href="../IMAGES/01.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+
 </head>
+<style>
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+      background-color: #f8f8f8;
+      color: #333;
+  }
+
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+  }
+
+  .orders-header {
+      text-align: center;
+      margin: 40px 0;
+  }
+
+  .orders-header h1 {
+      font-size: 32px;
+      color: #222;
+      margin-bottom: 10px;
+  }
+
+  .orders-header p {
+      color: #666;
+      font-size: 16px;
+  }
+
+  .empty-orders {
+      background-color: white;
+      border-radius: 8px;
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      margin-bottom: 40px;
+  }
+
+  .empty-orders-icon {
+      font-size: 60px;
+      color: #d1d1d1;
+      margin-bottom: 20px;
+  }
+
+  .empty-orders h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #444;
+  }
+
+  .empty-orders p {
+      color: #777;
+      max-width: 500px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+  }
+
+  .shop-btn {
+      display: inline-block;
+      background-color: #ff3e6c;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+  }
+
+  .shop-btn:hover {
+      background-color: #e0355c;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(255, 62, 108, 0.2);
+  }
+
+  .order-help {
+      background-color: #f0f7ff;
+      border-radius: 8px;
+      padding: 30px;
+      margin-top: 40px;
+  }
+
+  .order-help h3 {
+      color: #2a5885;
+      margin-bottom: 15px;
+  }
+
+  .order-help p {
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.6;
+  }
+
+  .contact-link {
+      color: #2a5885;
+      text-decoration: none;
+      font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+      .orders-header h1 {
+          font-size: 28px;
+      }
+
+      .empty-orders {
+          padding: 40px 15px;
+      }
+  }
+
+
+
+  /* Mobile styles */
+  @media (max-width: 768px) {
+      .hamburger {
+          display: block;
+          /* Show hamburger */
+      }
+
+      .logo img {
+          height: 70px;
+          margin-left: 0;
+          /* Remove previous margin */
+      }
+
+      .nav-links {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: #000;
+          width: 100%;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 15px 30px;
+          gap: 15px;
+          z-index: 999;
+          display: none;
+      }
+
+      .nav-links.active {
+          display: flex;
+      }
+
+      .right-nav {
+          margin-left: auto;
+          /* Push to the right */
+      }
+  }
+
+
+
+
+
+  /* Search bar container */
+  .search-bar {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      /* Adjust based on your layout */
+      margin: 3px auto;
+      font-family: spantax;
+
+  }
+
+  /* Input field */
+  .search-bar input[type="text"] {
+      width: 100%;
+      padding: 6px 20px;
+      border: 1px solid #e0e0e0;
+      border-radius: 24px;
+      /* Rounded edges */
+      font-size: 16px;
+      outline: none;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      font-family: spantax;
+
+  }
+
+  .search-bar input[type="text"]:focus {
+      border-color: #b8a07e;
+      /* Gold-like accent (common for jewelry sites) */
+      box-shadow: 0 2px 12px rgba(184, 160, 126, 0.2);
+  }
+
+  /* Search button */
+  .search-bar button {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #b8a07e;
+      /* Gold accent */
+
+      font-size: 16px;
+      padding: 8px 12px;
+  }
+
+  /* Suggestions dropdown */
+  .search-suggestions {
+      display: none;
+      position: absolute;
+      width: 100%;
+      max-height: 300px;
+      overflow-y: auto;
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      margin-top: 4px;
+  }
+
+  /* Individual suggestion items */
+  .suggestion-item {
+      display: block;
+      padding: 12px 16px;
+      color: #333;
+      text-decoration: none;
+      font-size: 15px;
+      border-bottom: 1px solid #f5f5f5;
+      transition: all 0.2s ease;
+  }
+
+  .suggestion-item:last-child {
+      border-bottom: none;
+  }
+
+  /* Hover & active states */
+  .suggestion-item:hover,
+  .suggestion-item:focus {
+      background-color: #f9f9f9;
+      color: #b8a07e;
+      /* Gold accent on hover */
+  }
+
+  .suggestion-item:active {
+      background-color: #f0f0f0;
+  }
+
+  /* Scrollbar styling (optional) */
+  .search-suggestions::-webkit-scrollbar {
+      width: 6px;
+  }
+
+  .search-suggestions::-webkit-scrollbar-thumb {
+      background: #d4c8b1;
+      /* Light gold scrollbar */
+      border-radius: 4px;
+  }
+
+  .search-suggestions::-webkit-scrollbar-track {
+      background: #f9f9f9;
+  }
+
+
+
+  /* Responsive styles */
+  @media (max-width: 480px) {
+      .search-bar {
+          max-width: 100%;
+          padding: 0 12px;
+      }
+
+      .search-bar input[type="text"] {
+          font-size: 14px;
+          padding: 8px 36px 8px 12px;
+      }
+
+      .search-bar button {
+          font-size: 16px;
+          right: 1px;
+      }
+
+      .suggestion-item {
+          font-size: 14px;
+          padding: 10px 14px;
+      }
+  }
+
+
+ /* Update the existing mobile styles for nav-links */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    width: 100vw; /* Use viewport width to prevent overflow */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 30px;
+    gap: 15px;
+    z-index: 999;
+    display: none;
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin-left: 0; /* Remove any potential margin */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Ensure dropdown menus don't cause overflow */
+  .nav-links .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    padding-left: 15px;
+    margin-top: 10px;
+  }
+
+  /* Prevent any horizontal scrolling on body when menu is open */
+  body.nav-open {
+    overflow-x: hidden;
+  }
+}
+
+/* Update the existing mobile styles for nav-links */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    width: 100vw; /* Use viewport width to prevent overflow */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 30px;
+    gap: 15px;
+    z-index: 999;
+    display: none;
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin-left: 0; /* Remove any potential margin */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Ensure dropdown menus don't cause overflow */
+  .nav-links .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    padding-left: 15px;
+    margin-top: 10px;
+  }
+
+  /* Prevent any horizontal scrolling on body when menu is open */
+  body.nav-open {
+    overflow-x: hidden;
+  }
+}
+
+
+  footer {
+      background-color: #020202;
+      font-family: spantax;
+  }
+
+  .footer-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+
+  .footer-container {
+      padding: 20px;
+      display: flex;
+      gap: 110px;
+  }
+
+  .footer-logo-section {
+      flex: 0 0 120px;
+  }
+
+  .footer-logo {
+      width: 100%;
+      height: auto;
+  }
+
+  .footer-content {
+      flex: 1;
+  }
+
+  .footer-sections {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+  }
+
+  .footer-section {
+      flex: 1;
+      min-width: 120px;
+  }
+
+  .footer-section h3 {
+      font-size: 14px;
+      margin-bottom: 12px;
+      color: #fff6f6;
+      text-transform: uppercase;
+  }
+
+  .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+
+  .footer-section ul li {
+      margin-bottom: 8px;
+  }
+
+  .footer-section ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 19px;
+      transition: color 0.2s ease;
+  }
+
+  /* Ensure the FOLLOW section is vertically aligned */
+  .footer-section .social-icons {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-top: 8px;
+      /* Adjust this to control spacing from "FOLLOW" */
+      margin-right: 130px;
+      padding: 0;
+      list-style: none;
+  }
+
+  /* Make icons perfectly circular and centered */
+  .footer-section .social-icons li a {
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 18px;
+      transition: all 0.3s ease;
+  }
+
+  .footer-bottom {
+      border-top: 1px solid #333;
+      padding: 2px 2px;
+      font-size: 12px;
+      color: #888;
+
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+      .footer-container {
+          flex-direction: column;
+          gap: 20px;
+          padding: 15px;
+      }
+
+      .footer-logo-section {
+          flex: 0 0 auto;
+          text-align: center;
+          margin-bottom: 5px;
+      }
+
+      .footer-logo {
+          max-width: 100px;
+      }
+
+      .footer-sections {
+          flex-direction: column;
+          gap: 15px;
+      }
+
+      .company-section {
+          display: none;
+      }
+
+      .footer-section {
+          text-align: center;
+      }
+
+      .social-icons {
+          justify-content: center;
+      }
+
+      .footer-bottom {
+          text-align: center;
+          padding: 10px 15px;
+          font-size: 11px;
+      }
+  }
+
+  /* Center the footer bottom text */
+  .footer-bottom .footer-container {
+      justify-content: center;
+      display: flex;
+  }
+
+  /* Hide Shop section on smaller screens */
+  @media (max-width: 768px) {
+      .footer-section:nth-child(1) {
+          display: none;
+      }
+  }
+
+
+  /* Order Page Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.orders-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px 0;
+}
+
+.orders-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.orders-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Loading State */
+.loading-orders {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.loading-spinner {
+  font-size: 2rem;
+  color: #d4af37;
+  margin-bottom: 20px;
+}
+
+.loading-orders p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Empty Orders State */
+.empty-orders {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.empty-orders-icon {
+  font-size: 4rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.empty-orders h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.empty-orders p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shop-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #d4af37, #f4d03f);
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.shop-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+/* Orders List */
+.orders-list {
+  margin-bottom: 40px;
+}
+
+/* Order Card */
+.order-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.order-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Order Header */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.order-info h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin: 0 0 5px 0;
+  font-weight: 600;
+}
+
+.order-date {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Status Badge */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-processing {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.status-shipped {
+  background: #cfe2ff;
+  color: #084298;
+  border: 1px solid #9ec5fe;
+}
+
+
+.status-delivered {
+  background: #d1e7dd;
+  color: #0a3622;
+  border: 1px solid #a3cfbb;
+}
+
+.status-cancelled {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f1aeb5;
+}
+
+/* Order Body */
+.order-body {
+  padding: 25px;
+}
+
+/* Order Items */
+.order-items {
+  margin-bottom: 20px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-item.clickable-item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 5px 0;
+}
+
+.order-item.clickable-item:hover {
+  background-color: #f8f9fa;
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item-image {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-details h4 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.clickable-item .item-details h4 {
+  color: #d4af37;
+  transition: color 0.3s ease;
+}
+
+.clickable-item:hover .item-details h4 {
+  color: #c19b26;
+}
+
+.item-details p {
+  margin: 3px 0;
+  font-size: 0.9rem;
+}
+
+.item-price {
+  color: #d4af37;
+  font-weight: 600;
+}
+
+.item-quantity {
+  color: #666;
+}
+
+.item-subtotal {
+  color: #333;
+  font-weight: 500;
+}
+
+/* Item Arrow for clickable items */
+.item-arrow {
+  margin-left: auto;
+  color: #ccc;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.clickable-item:hover .item-arrow {
+  color: #d4af37;
+  transform: translateX(3px);
+}
+
+/* Order Summary */
+.order-summary {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.summary-row:last-child {
+  margin-bottom: 0;
+}
+
+.summary-row.total {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  padding-top: 10px;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 10px;
+}
+
+/* Order Actions */
+.order-actions {
+  padding: 20px 25px;
+  background: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #d4af37, #f4d03f);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #c19b26, #e8c547);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+}
+
+/* Order Help Section */
+.order-help {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.order-help h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.order-help p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-link {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #c19b26;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .orders-header h1 {
+    font-size: 2rem;
+  }
+  
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+  
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .order-item.clickable-item {
+    padding: 15px;
+  }
+  
+  .item-image {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .item-arrow {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+  
+  .order-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .btn-primary, .btn-secondary {
+    justify-content: center;
+  }
+  
+  .order-summary {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .orders-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .order-card {
+    margin-bottom: 15px;
+  }
+  
+  .order-body {
+    padding: 20px;
+  }
+  
+  .item-image {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .item-details h4 {
+    font-size: 1rem;
+  }
+}
+
+
+/*-------------------------- view order details css ---------------------*/
+
+/* Receipt Overlay Styles - Add this to your order.css file */
+
+.receipt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  backdrop-filter: blur(5px);
+}
+
+.receipt-container {
+  background: #fff;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border: 3px solid #d4af37;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.receipt-header {
+  position: relative;
+  padding: 10px;
+  background: linear-gradient(135deg, #d4af37, #f4e4a1);
+  border-radius: 12px 12px 0 0;
+}
+
+.close-receipt {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.close-receipt:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.receipt-content {
+  padding: 20px;
+}
+
+.receipt-company-header {
+  text-align: center;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.receipt-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.receipt-company-header h2 {
+  color: #d4af37;
+  margin: 10px 0 5px 0;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.receipt-company-header p {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+.receipt-order-info h3 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.receipt-order-details {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #d4af37;
+  margin-bottom: 20px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.detail-row:last-child {
+  margin-bottom: 0;
+}
+
+.detail-row span:first-child {
+  font-weight: 600;
+  color: #333;
+}
+
+.detail-row span:last-child {
+  color: #666;
+}
+
+.receipt-items h4,
+.receipt-payment-summary h4 {
+  color: #333;
+  border-bottom: 1px solid #d4af37;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.receipt-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.receipt-item:last-child {
+  border-bottom: none;
+}
+
+.receipt-item-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-right: 15px;
+  border: 1px solid #ddd;
+}
+
+.receipt-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.receipt-item-details {
+  flex: 1;
+}
+
+.receipt-item-title {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.receipt-item-prices {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.receipt-item-mrp {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 12px;
+}
+
+.receipt-item-price {
+  color: #d4af37;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.receipt-item-discount {
+  background: #e8f5e8;
+  color: #2e7d32;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.receipt-item-quantity {
+  color: #666;
+  font-size: 12px;
+}
+
+.payment-details {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.payment-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.payment-row:last-child {
+  margin-bottom: 0;
+}
+
+.payment-row span:first-child {
+  color: #333;
+}
+
+.payment-row span:last-child {
+  color: #666;
+  font-weight: 500;
+}
+
+.discount-row span:last-child {
+  color: #2e7d32;
+}
+
+.total-row {
+  border-top: 2px solid #d4af37;
+  padding-top: 12px;
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.total-row span {
+  color: #333;
+}
+
+.total-row span:last-child {
+  color: #d4af37;
+  font-size: 18px;
+}
+
+.receipt-footer {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.receipt-footer p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 12px;
+}
+
+.receipt-footer p:first-child {
+  font-weight: 600;
+  color: #333;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.status-placed {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-processing {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.status-shipped {
+  background: #e8f5e8;
+  color: #2e7d32;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .receipt-container {
+    width: 95%;
+    margin: 10px;
+    max-height: 95vh;
+  }
+  
+  .receipt-content {
+    padding: 15px;
+  }
+  
+  .receipt-company-header h2 {
+    font-size: 24px;
+  }
+  
+  .receipt-item {
+    padding: 10px 0;
+  }
+  
+  .receipt-item-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .detail-row,
+  .payment-row {
+    font-size: 13px;
+  }
+}s
+</style>
 <body>
-    <!-- Your header/navigation would go here -->
-    
-    <div class="container">
-        <div class="orders-header">
-            <h1>My Orders</h1>
-            <p>View your order history and track shipments</p>
+  <!-- Your header/navigation would go here -->
+
+  <!-- HEADER -->
+  <header id="header">
+    <!-- TOP BAR -->
+    <div class="header-top-bar">
+      <span>Welcome To OY JEWELS Store</span>
+    </div>
+
+
+    <!-- MAIN NAVIGATION -->
+    <nav class="navigation">
+      <a href="#" class="logo">
+        <img src="../IMAGES/01.png" alt="Logo" />
+      </a>
+
+      <!-- NAVBAR LINKS -->
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+
+        <li class="dropdown">
+          <a href="#">Collection</a>
+          <ul class="dropdown-menu">
+            <li><a href="../earring.html?filter=earrings">Earrings</a></li>
+            <li><a href="../neck.html?filter=necklaces">Necklaces</a></li>
+            <li><a href="../rings.html?filter=rings">Rings</a></li>
+            <li><a href="../chain.html?filter=chain">Chains</a></li>
+            <li><a href="../bracelet.html?filter=bracelets">Bracelets</a></li>
+            <li><a href="../mangalsutra.html?filter=mangalsutra">Mangalsutra</a></li>
+          <li><a href="../hair.html?filter=hair">Hair Accessories</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">Shop By</a>
+          <ul class="dropdown-menu">
+            <li><a href="../wedding.html?occasion=wedding">Wedding</a></li>
+            <li><a href="../office.html">Office</a></li>
+            <li><a href="../casual.html">Casual</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="../gifts.html">Gifting</a>
+          <ul class="dropdown-menu">
+            <li><a href="../gifts.html?for=mother">Mother</a></li>
+            <li><a href="../gifts.html?for=sister">Sister</a></li>
+            <li><a href="../gifts.html?for=wife">Wife</a></li>
+            <li><a href="../gifts.html?for=friend">Friend</a></li>
+          </ul>
+        </li>
+
+        <li><a href="../contact.html">Contact Us</a></li>
+        <li><a href="../about.html">About Us</a></li>
+
+        <!-- My Orders added at the end -->
+        <li><a href="/user-order/order.html">My Orders</a></li>
+      </ul>
+
+      <!-- RIGHT ICONS -->
+      <div class="right-nav">
+        <div class="hamburger" id="hamburger">
+          <i class="fa fa-bars"></i>
         </div>
-        
-        <div class="empty-orders">
-            <div class="empty-orders-icon">
-                <i class="fas fa-box-open"></i>
-            </div>
-            <h2>No Orders Yet</h2>
-            <p>You haven't placed any orders with us yet. Start shopping to discover our beautiful jewelry collection.</p>
-            <a href="index.html" class="shop-btn">Shop Now</a>
+        <!-- In your header/navigation -->
+        <a href="../wishlist.html" class="wishlist-link">
+          <div class="wishlist-badge">
+            <i class="fa-solid fa-heart" style="color: #ffffff;"></i> <span class="wishlist-count">0</span>
+          </div>
+        </a>
+
+        <!-- Floating notification element -->
+        <div class="wishlist-notification" id="wishlist-notification">
+          <i class="fas fa-check-circle"></i>
+          <span class="notification-message">Item added to wishlist</span>
         </div>
-        
-        <div class="order-help">
-            <h3>Need help with an order?</h3>
-            <p>If you have questions about an order you've placed or need assistance with tracking, our customer service team is happy to help.</p>
-            <a href="contact.html" class="contact-link">Contact Us →</a>
+
+        <!--LOGIN / MYPROFILE-->
+        <div class="user-dropdown">
+          <a href="#" class="user-icon"><i class="fa fa-user"></i></a>
+          <div class="dropdown-content">
+            <a href="../user-profile/user-profile.html">My Profile</a>
+            <!-- <a href="../login.html">Login/Logout</a> -->
+          </div>
         </div>
+
+        <a href="../cart.html"><i class="fa fa-shopping-cart"></i><span id="cart-count">0</span></a>
+      </div>
+    </nav>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search for jewelry..." id="searchInput">
+      <button><i class="fa fa-search"></i></button>
+      <div class="search-suggestions" id="searchSuggestions"></div>
+    </div>
+
+    <!-- Include the JavaScript file -->
+    <script src="../search.js"></script>
+  </header>
+
+
+  <div class="container">
+    <div class="orders-header">
+      <h1>My Orders</h1>
+      <p>View your order history and track shipments</p>
+    </div>
+
+    <!-- Loading State -->
+    <div class="loading-orders" id="loadingOrders" style="display: none;">
+      <div class="loading-spinner">
+        <i class="fas fa-spinner fa-spin"></i>
+      </div>
+      <p>Loading your orders...</p>
+    </div>
+
+    <!-- Orders List Container -->
+    <div class="orders-list" id="ordersList" style="display: none;">
+      <!-- Orders will be populated here by JavaScript -->
+    </div>
+
+    <!-- Empty Orders (Original) -->
+    <div class="empty-orders" id="emptyOrders">
+      <div class="empty-orders-icon">
+        <i class="fas fa-box-open"></i>
+      </div>
+      <h2>No Orders Yet</h2>
+      <p>You haven't placed any orders with us yet. Start shopping to discover our beautiful jewelry collection.</p>
+      <a href="../index.html" class="shop-btn">Shop Now</a>
+    </div>
+
+    <div class="order-help">
+      <h3>Need help with an order?</h3>
+      <p>If you have questions about an order you've placed or need assistance with tracking, our customer service team
+        is happy to help.</p>
+      <a href="/contact.html" class="contact-link">Contact Us →</a>
+    </div>
+  </div>
+
+<!-- Receipt Overlay -->
+<div class="receipt-overlay" id="receiptOverlay" style="display: none;">
+  <div class="receipt-container">
+    <div class="receipt-header">
+      <button class="close-receipt" onclick="orderManager.closeReceipt()">
+        <i class="fas fa-times"></i>
+      </button>
     </div>
     
-    <!-- Your footer would go here -->
+    <div class="receipt-content">
+      <!-- Company Header -->
+      <div class="receipt-company-header">
+        <img src="../IMAGES/01.png" alt="OY Jewels" class="receipt-logo">
+        <h2>OY JEWELS</h2>
+        <p>Premium Jewelry Store</p>
+      </div>
+      
+      <!-- Order Info -->
+      <div class="receipt-order-info">
+        <h3>ORDER RECEIPT</h3>
+        <div class="receipt-order-details">
+          <div class="detail-row">
+            <span>Order ID:</span>
+            <span id="receiptOrderId">-</span>
+          </div>
+          <div class="detail-row">
+            <span>Order Date:</span>
+            <span id="receiptOrderDate">-</span>
+          </div>
+          <div class="detail-row">
+            <span>Status:</span>
+            <span id="receiptOrderStatus" class="status-badge">-</span>
+          </div>
+          <div class="detail-row">
+            <span>Expected Delivery:</span>
+            <span id="receiptDeliveryDate">-</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Items List -->
+      <div class="receipt-items">
+        <h4>Order Items</h4>
+        <div class="receipt-items-list" id="receiptItemsList">
+          <!-- Items will be populated here -->
+        </div>
+      </div>
+      
+      <!-- Payment Summary -->
+      <div class="receipt-payment-summary">
+        <h4>Payment Details</h4>
+        <div class="payment-details">
+          <div class="payment-row">
+            <span>Subtotal:</span>
+            <span id="receiptSubtotal">₹0.00</span>
+          </div>
+          <div class="payment-row">
+            <span>SGST (9%):</span>
+            <span id="receiptSGST">₹0.00</span>
+          </div>
+          <div class="payment-row">
+            <span>CGST (9%):</span>
+            <span id="receiptCGST">₹0.00</span>
+          </div>
+          <div class="payment-row discount-row" id="receiptDiscountRow" style="display: none;">
+            <span>Discount:</span>
+            <span id="receiptDiscount">-₹0.00</span>
+          </div>
+          <div class="payment-row total-row">
+            <span>Total Amount:</span>
+            <span id="receiptTotal">₹0.00</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Footer -->
+      <div class="receipt-footer">
+        <p>Thank you for shopping with OY Jewels!</p>
+        <p>For any queries, contact us at support@oyjewels.com</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Your footer would go here -->
+  <footer>
+    <div class="footer-wrapper">
+      <div class="footer-container">
+        <div class="footer-logo-section">
+          <img src="../IMAGES/01.png" alt="Palmonas Logo" class="footer-logo">
+        </div>
+
+        <div class="footer-content">
+          <div class="footer-sections">
+            <div class="footer-section">
+              <h3>Shop</h3>
+              <ul>
+                <li><a href="necklace.html">Necklaces</a></li>
+                <li><a href="ring.html">Rings</a></li>
+                <li><a href="brac.html">Bracelets</a></li>
+                <li><a href="ear.html">Earrings</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-section company-section">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/store">Store Location</a></li>
+                <li><a href="mailto:support@palmonas.com">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-section">
+              <h3>Legal</h3>
+              <ul>
+                <li><a href="faqs.html">FAQS</a></li>
+                <li><a href="disclaimer.html">Disclaimer</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="shipping.html">Shipping Policy</a></li>
+                <li><a href="cancel.html">Cancellation Policy</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-section">
+              <h3>Follow</h3>
+              <ul class="social-icons">
+                <li><a href="https://instagram.com/palmonas" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://facebook.com/palmonas" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://pinterest.com/palmonas" target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-container">
+          &copy; 2025 Kunash Media Solutions. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+
+<!-- Order Management Script -->
+<script type="module">
+  // Import products API
+  import { fetchAllProducts } from '/global_js/backend_apis/products.js';
+
+  class OrderManager {
+    constructor() {
+      this.API_BASE_URL = 'http://localhost:8080/api/orders';
+      this.products = [];
+      this.currentOrders = []; // ADD THIS LINE
+      this.init();
+    }
+
+    async init() {
+      try {
+        // Load products first
+        await this.loadProducts();
+        // Load orders
+        await this.loadOrders();
+      } catch (error) {
+        console.error('Error initializing order manager:', error);
+        this.showEmptyState();
+      }
+    }
+
+    async loadProducts() {
+      try {
+        this.products = await fetchAllProducts();
+      } catch (error) {
+        console.error('Error loading products:', error);
+        this.products = [];
+      }
+    }
+
+    async loadOrders() {
+      // Show loading state
+      this.showLoadingState();
+
+      try {
+        // Check if user is logged in
+        if (!window.userAPI || !window.userAPI.isLoggedIn()) {
+          console.log('User not logged in');
+          this.showEmptyState();
+          return;
+        }
+
+        // Get current user
+        const currentUser = window.userAPI.getCurrentUser();
+        if (!currentUser || !currentUser.userId) {
+          console.log('No valid user found');
+          this.showEmptyState();
+          return;
+        }
+
+        // Fetch orders from API
+        const response = await fetch(`${this.API_BASE_URL}/user/${currentUser.userId}`);
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const orders = await response.json();
+        
+        // Hide loading state
+        this.hideLoadingState();
+
+        if (orders && orders.length > 0) {
+          // Sort orders by priority before displaying
+          const sortedOrders = this.sortOrdersByPriority(orders);
+          this.displayOrders(sortedOrders);
+        } else {
+          this.showEmptyState();
+        }
+
+      } catch (error) {
+        console.error('Error loading orders:', error);
+        this.hideLoadingState();
+        this.showEmptyState();
+      }
+    }
+
+    // New method to sort orders by priority
+    sortOrdersByPriority(orders) {
+      const statusPriority = {
+        'placed': 1,  // Top priority
+        'shipped': 2,     // Mid priority
+        'delivered': 3,
+        'cancel' : 4       // Last priority
+      };
+
+      return orders.sort((a, b) => {
+        const priorityA = statusPriority[a.status.toLowerCase()] || 999; // Unknown statuses go to end
+        const priorityB = statusPriority[b.status.toLowerCase()] || 999;
+        
+        if (priorityA !== priorityB) {
+          return priorityA - priorityB; // Sort by priority
+        }
+        
+        // If same priority, sort by order date (newest first)
+        return new Date(b.orderDate) - new Date(a.orderDate);
+      });
+    }
+
+    showLoadingState() {
+      document.getElementById('loadingOrders').style.display = 'block';
+      document.getElementById('emptyOrders').style.display = 'none';
+      document.getElementById('ordersList').style.display = 'none';
+    }
+
+    hideLoadingState() {
+      document.getElementById('loadingOrders').style.display = 'none';
+    }
+
+    showEmptyState() {
+      document.getElementById('emptyOrders').style.display = 'block';
+      document.getElementById('ordersList').style.display = 'none';
+      this.hideLoadingState();
+    }
+
+    displayOrders(orders) {
+      this.currentOrders = orders; // ADD THIS LINE
+      
+      const ordersList = document.getElementById('ordersList');
+      const emptyOrders = document.getElementById('emptyOrders');
+      
+      // Hide empty state and show orders list
+      emptyOrders.style.display = 'none';
+      ordersList.style.display = 'block';
+      
+      // Clear existing content
+      ordersList.innerHTML = '';
+      
+      // Create orders HTML
+      orders.forEach(order => {
+        const orderCard = this.createOrderCard(order);
+        ordersList.appendChild(orderCard);
+      });
+    }
+
+    createOrderCard(order) {
+      const orderCard = document.createElement('div');
+      orderCard.className = 'order-card';
+      
+      // Format dates
+      const orderDate = new Date(order.orderDate).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+      
+      const deliveryDate = new Date(order.deliveryDate).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+
+      // Create order items HTML
+      const orderItemsHTML = order.items.map(item => {
+        const product = this.getProductById(item.productId);
+        const productImage = product ? product.image : '/IMAGES/placeholder.jpg';
+        
+        return `
+          <div class="order-item clickable-item" onclick="orderManager.redirectToProduct(${item.productId})">
+            <div class="item-image">
+              <img src="${productImage}" alt="${item.name}" />
+            </div>
+            <div class="item-details">
+              <h4>${item.name}</h4>
+              <p class="item-price">₹${item.productPrice.toFixed(2)}</p>
+              <p class="item-quantity">Quantity: ${item.productQuantity}</p>
+              <p class="item-subtotal">Subtotal: ₹${item.subtotal.toFixed(2)}</p>
+            </div>
+            <div class="item-arrow">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      orderCard.innerHTML = `
+        <div class="order-header">
+          <div class="order-info">
+            <h3>Order #${order.orderId}</h3>
+            <p class="order-date">Placed on ${orderDate}</p>
+          </div>
+          <div class="order-status">
+            <span class="status-badge status-${order.status.toLowerCase()}">${this.capitalizeFirst(order.status)}</span>
+          </div>
+        </div>
+        
+        <div class="order-body">
+          <div class="order-items">
+            ${orderItemsHTML}
+          </div>
+          
+          <div class="order-summary">
+            <div class="summary-row">
+              <span>Total Items:</span>
+              <span>${order.items.length}</span>
+            </div>
+            <div class="summary-row">
+              <span>Expected Delivery:</span>
+              <span>${deliveryDate}</span>
+            </div>
+            <div class="summary-row total">
+              <span>Order Total:</span>
+              <span>₹${order.total.toFixed(2)}</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="order-actions">
+          <button class="btn-secondary" onclick="orderManager.trackOrder(${order.orderId})">
+            <i class="fas fa-truck"></i> Track Order
+          </button>
+          <button class="btn-primary" onclick="orderManager.viewOrderDetails(${order.orderId})">
+            <i class="fas fa-eye"></i> View Details
+          </button>
+        </div>
+      `;
+
+      return orderCard;
+    }
+
+    getProductById(productId) {
+      return this.products.find(product => product.id === productId);
+    }
+
+    capitalizeFirst(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    // Action methods
+    trackOrder(orderId) {
+      alert(`Tracking functionality for Order #${orderId} will be implemented soon.`);
+    }
+
+    // Updated viewOrderDetails method
+    viewOrderDetails(orderId) {
+      // Find the order by ID
+      const order = this.currentOrders.find(o => o.orderId === orderId);
+      
+      if (order) {
+        this.showReceiptOverlay(order);
+      } else {
+        console.error('Order not found:', orderId);
+        alert('Order details not found. Please try again.');
+      }
+    }
+
+    redirectToProduct(productId) {
+      // Redirect to product details page with product ID
+      window.location.href = `/product.html?id=${productId}`;
+      // Alternative: If you have a different product page structure, modify the URL accordingly
+      // window.location.href = `/product.html?productId=${productId}`;
+    }
+
+    // Method to show receipt overlay
+    showReceiptOverlay(order) {
+      const overlay = document.getElementById('receiptOverlay');
+      
+      // Populate order information
+      document.getElementById('receiptOrderId').textContent = `#${order.orderId || 'NA'}`;
+      
+      const orderDate = order.orderDate ? 
+        new Date(order.orderDate).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        }) : 'NA';
+      document.getElementById('receiptOrderDate').textContent = orderDate;
+      
+      const statusElement = document.getElementById('receiptOrderStatus');
+      statusElement.textContent = order.status ? this.capitalizeFirst(order.status) : 'NA';
+      statusElement.className = `status-badge status-${(order.status || 'na').toLowerCase()}`;
+      
+      const deliveryDate = order.deliveryDate ? 
+        new Date(order.deliveryDate).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        }) : 'NA';
+      document.getElementById('receiptDeliveryDate').textContent = deliveryDate;
+      
+      // Populate items
+      this.populateReceiptItems(order.items || []);
+      
+      // Calculate and populate payment details
+      this.populatePaymentDetails(order);
+      
+      // Show overlay
+      overlay.style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    // Method to populate receipt items
+    populateReceiptItems(items) {
+      const itemsList = document.getElementById('receiptItemsList');
+      itemsList.innerHTML = '';
+      
+      if (!items || items.length === 0) {
+        itemsList.innerHTML = '<p style="text-align: center; color: #666;">No items found</p>';
+        return;
+      }
+      
+      items.forEach(item => {
+        const product = this.getProductById(item.productId);
+        const productImage = product ? product.image : '/IMAGES/placeholder.jpg';
+        
+        // Calculate MRP and discount
+        const productPrice = item.productPrice || 0;
+        const mrp = product ? (product.oldPrice || product.price || productPrice * 1.2) : productPrice * 1.2;
+        const discount = mrp > productPrice ? ((mrp - productPrice) / mrp * 100).toFixed(0) : 0;
+        
+        const itemElement = document.createElement('div');
+        itemElement.className = 'receipt-item';
+        
+        itemElement.innerHTML = `
+          <div class="receipt-item-image">
+            <img src="${productImage}" alt="${item.name || 'Product'}" />
+          </div>
+          <div class="receipt-item-details">
+            <div class="receipt-item-title">${item.name || 'NA'}</div>
+            <div class="receipt-item-prices">
+              <span class="receipt-item-mrp">MRP: ₹${mrp.toFixed(2)}</span>
+              <span class="receipt-item-price">₹${productPrice.toFixed(2)}</span>
+              ${discount > 0 ? `<span class="receipt-item-discount">${discount}% OFF</span>` : ''}
+            </div>
+            <div class="receipt-item-quantity">Quantity: ${item.productQuantity || 1}</div>
+          </div>
+        `;
+        
+        itemsList.appendChild(itemElement);
+      });
+    }
+
+    // Method to populate payment details
+    populatePaymentDetails(order) {
+      const total = order.total || 0;
+      
+      // Calculate tax-exclusive amount (assuming 18% total tax - 9% SGST + 9% CGST)
+      const taxRate = 0.18;
+      const subtotal = total / (1 + taxRate);
+      const totalTax = total - subtotal;
+      const sgst = totalTax / 2;
+      const cgst = totalTax / 2;
+      
+      // Update payment summary
+      document.getElementById('receiptSubtotal').textContent = `₹${subtotal.toFixed(2)}`;
+      document.getElementById('receiptSGST').textContent = `₹${sgst.toFixed(2)}`;
+      document.getElementById('receiptCGST').textContent = `₹${cgst.toFixed(2)}`;
+      document.getElementById('receiptTotal').textContent = `₹${total.toFixed(2)}`;
+      
+      // Handle discount if applicable
+      const discountRow = document.getElementById('receiptDiscountRow');
+      const discountAmount = order.discount || 0;
+      
+      if (discountAmount > 0) {
+        document.getElementById('receiptDiscount').textContent = `-₹${discountAmount.toFixed(2)}`;
+        discountRow.style.display = 'flex';
+      } else {
+        discountRow.style.display = 'none';
+      }
+    }
+
+    // Method to close receipt overlay
+    closeReceipt() {
+      const overlay = document.getElementById('receiptOverlay');
+      overlay.style.display = 'none';
+      document.body.style.overflow = 'auto'; // Restore background scrolling
+    }
+  }
+
+  // Initialize when DOM is loaded and userAPI is ready
+  function initializeOrderManager() {
+    if (window.userAPI) {
+      window.orderManager = new OrderManager();
+    } else {
+      // Wait for userAPI to be ready
+      window.addEventListener('userAPIReady', () => {
+        window.orderManager = new OrderManager();
+      });
+    }
+  }
+
+  // Initialize
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeOrderManager);
+  } else {
+    initializeOrderManager();
+  }
+
+  // Close receipt overlay when clicking outside (ADD THIS)
+  document.addEventListener('DOMContentLoaded', function() {
+    const overlay = document.getElementById('receiptOverlay');
+    if (overlay) {
+      overlay.addEventListener('click', function(e) {
+        if (e.target === this) {
+          window.orderManager.closeReceipt();
+        }
+      });
+    }
+  });
+</script>
+  <script src="/global_js/backend_apis/users.js"></script>
+  <script src="../user-profile/user-logout.js"></script>
 </body>
+
 </html>

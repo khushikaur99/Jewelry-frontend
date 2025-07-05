@@ -935,6 +935,42 @@ footer {
       margin-top: 4px;
     }
   }
+
+  /* Floating buttons */
+    .floating-icons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .floating-icons a {
+      background-color: #25D366; /* WhatsApp green */
+      color: white;
+      padding: 14px;
+      border-radius: 50%;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease;
+    }
+
+    .floating-icons a.phone-icon {
+      background-color: #007bff; /* Phone blue */
+    }
+
+    .floating-icons a:hover {
+      opacity: 0.8;
+    }
+
+    .floating-icons i {
+      font-size: 20px;
+    }
   </style>
 
 
@@ -979,16 +1015,7 @@ footer {
           <li><a href="casual.html">Casual</a></li>
         </ul>
       </li>
-      <li class="dropdown">
-        <a href="gifts.html">Gifting</a>
-        <ul class="dropdown-menu">
-          <li><a href="gifts.html?for=mother">Mother</a></li>
-          <li><a href="gifts.html?for=sister">Sister</a></li>
-          <li><a href="gifts.html?for=wife">Wife</a></li>
-          <li><a href="gifts.html?for=friend">Friend</a></li>
-        </ul>
-      </li>
-
+  
       <li><a href="contact.html">Contact Us</a></li>
       <li><a href="about.html">About Us</a></li>
 
@@ -1064,7 +1091,18 @@ footer {
 
 
 
+    <!-- Floating WhatsApp and Phone Icons -->
+  <div class="floating-icons">
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/918482859816" target="_blank" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
+    <!-- Phone Icon -->
+    <a href="tel:8482859816" class="phone-icon" title="Call Now">
+      <i class="fas fa-phone"></i>
+    </a>
+  </div>
 
 
 
@@ -1074,7 +1112,7 @@ footer {
 <!-- Responsive Banner Section -->
 <section id="main-banner">
   <div class="banner-container">
-    <img src="IMAGES/neck banner1.jpg" alt="Stunning Bracelets - Special Prices" />
+    <img src="IMAGES/CH BANNER.jpg" alt="Stunning Bracelets - Special Prices" />
   </div>
 </section>
 
@@ -1089,11 +1127,19 @@ footer {
 
 <script>
   const productData = [
-    {id: 109, name: "Silver Chains", price: 6400.00, image: "IMAGES/chain11.jpg"},
-    {id: 110, name: "Silver Chains", price: 6400.00, image: "IMAGES/chain12.jpg"},
-    {id: 111, name: "Silver Chains", price: 6400.00, image: "IMAGES/chain13.jpg"},
-    
-    
+    {id: 109, name: "Silver Chains", price: 1538.00, image: "IMAGES/CH1.jpg"},
+    {id: 110, name: "Silver Chains", price: 1538.00, image: "IMAGES/CH2.jpg"},
+    {id: 111, name: "Silver Chains", price: 1538.00, image: "IMAGES/CH3.jpg"},
+    {id: 112, name: "Silver Chains", price: 1298.00, image: "IMAGES/CH4.jpg"},
+    {id: 113, name: "Silver Chains", price: 1398.00, image: "IMAGES/CH5.jpg"},
+    {id: 114, name: "Silver Chains", price: 1398.00, image: "IMAGES/CH6.png"},
+    {id: 115, name: "Silver Chains", price: 1838.00, image: "IMAGES/CH7.png"},
+    {id: 116, name: "Silver Chains", price: 1538.00, image: "IMAGES/CH8.jpg"},
+    {id: 117, name: "Silver Chains", price: 1808.00, image: "IMAGES/CH9.jpg"},
+    {id: 118, name: "Silver Chains", price: 1398.00, image: "IMAGES/CH16.png"},
+    {id: 119, name: "Silver Chains", price: 1298.00, image: "IMAGES/CH13.jpg"},
+    {id: 120, name: "Silver Chains", price: 1398.00, image: "IMAGES/CH14.jpg"},
+    {id: 121, name: "Silver Chains", price: 2498.00, image: "IMAGES/CH12.jpg"},
   ];
 
   const container = document.getElementById("product-list");
@@ -1260,8 +1306,10 @@ document.addEventListener('DOMContentLoaded', function() {
          <div class="footer-section">
   <h3>Follow</h3>
   <ul class="social-icons">
-    <li><a href="https://www.instagram.com/oy_jewells/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a></li>
-    <li><a href="https://www.facebook.com/profile.php?id=61578134903237" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="https://www.instagram.com/oy_jewells/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a></li>
+<li><a href="https://www.facebook.com/profile.php?id=61578134903237" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="https://wa.me/918482859816" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+<li><a href="https://pinterest.com/oy_jewells" target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
   </ul>
 </div>
         </div>

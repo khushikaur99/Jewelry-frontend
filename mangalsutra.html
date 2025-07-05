@@ -1063,7 +1063,41 @@ footer {
   }
 
 
+/* Floating buttons */
+    .floating-icons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 1000;
+    }
 
+    .floating-icons a {
+      background-color: #25D366; /* WhatsApp green */
+      color: white;
+      padding: 14px;
+      border-radius: 50%;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease;
+    }
+
+    .floating-icons a.phone-icon {
+      background-color: #007bff; /* Phone blue */
+    }
+
+    .floating-icons a:hover {
+      opacity: 0.8;
+    }
+
+    .floating-icons i {
+      font-size: 20px;
+    }
   </style>
 
 
@@ -1108,15 +1142,7 @@ footer {
           <li><a href="casual.html">Casual</a></li>
         </ul>
       </li>
-      <li class="dropdown">
-        <a href="gifts.html">Gifting</a>
-        <ul class="dropdown-menu">
-          <li><a href="gifts.html?for=mother">Mother</a></li>
-          <li><a href="gifts.html?for=sister">Sister</a></li>
-          <li><a href="gifts.html?for=wife">Wife</a></li>
-          <li><a href="gifts.html?for=friend">Friend</a></li>
-        </ul>
-      </li>
+    
 
       <li><a href="contact.html">Contact Us</a></li>
       <li><a href="about.html">About Us</a></li>
@@ -1194,7 +1220,18 @@ footer {
 
 
 
+    <!-- Floating WhatsApp and Phone Icons -->
+  <div class="floating-icons">
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/918482859816" target="_blank" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
+    <!-- Phone Icon -->
+    <a href="tel:8482859816" class="phone-icon" title="Call Now">
+      <i class="fas fa-phone"></i>
+    </a>
+  </div>
 
 
 
@@ -1203,7 +1240,7 @@ footer {
 <!-- Responsive Banner Section -->
 <section id="main-banner">
   <div class="banner-container">
-    <img src="IMAGES/mangalsutra banner.jpg" alt="Stunning Bracelets - Special Prices" />
+    <img src="IMAGES/MG BANNER (2).jpg" alt="Stunning Bracelets - Special Prices" />
   </div>
 </section>
 <section id="product1" class="section4">
@@ -1225,9 +1262,9 @@ footer {
 
 <script>
   const productData = [
-    {id: 115, name: "Mangalsutras", price: 6400.00, image: "IMAGES/mangalsutra.jpg"},
-    {id: 116, name: "Mangalsutras", price: 6400.00, image: "IMAGES/mangalsutra11.jpg"},
-    {id: 117, name: "Mangalsutras", price: 6400.00, image: "IMAGES/mangalsutra12.jpg"},
+    {id: 130, name: "Mangalsutras", price: 1298.00, image: "IMAGES/MG1.jpg"},
+    {id: 131, name: "Mangalsutras", price: 1718.00, image: "IMAGES/MG2.jpg"},
+    {id: 132, name: "Mangalsutras", price: 2208.00, image: "IMAGES/MG3.jpg"},
     
     
   ];
@@ -1394,8 +1431,10 @@ document.addEventListener('DOMContentLoaded', function() {
          <div class="footer-section">
   <h3>Follow</h3>
   <ul class="social-icons">
-    <li><a href="https://www.instagram.com/oy_jewells/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a></li>
-    <li><a href="https://www.facebook.com/profile.php?id=61578134903237" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+ <li><a href="https://www.instagram.com/oy_jewells/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a></li>
+<li><a href="https://www.facebook.com/profile.php?id=61578134903237" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="https://wa.me/918482859816" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+<li><a href="https://pinterest.com/oy_jewells" target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
   </ul>
 </div>
         </div>

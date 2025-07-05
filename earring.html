@@ -1098,6 +1098,42 @@ footer {
         .wishlist-icon-card.pulse {
             animation: heartPulse 0.6s ease;
         }
+
+        /* Floating buttons */
+    .floating-icons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .floating-icons a {
+      background-color: #25D366; /* WhatsApp green */
+      color: white;
+      padding: 14px;
+      border-radius: 50%;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease;
+    }
+
+    .floating-icons a.phone-icon {
+      background-color: #007bff; /* Phone blue */
+    }
+
+    .floating-icons a:hover {
+      opacity: 0.8;
+    }
+
+    .floating-icons i {
+      font-size: 20px;
+    }
   </style>
 <!-- HEADER -->
 <header id="header">
@@ -1140,15 +1176,7 @@ footer {
         </ul>
       </li>
 
-      <li class="dropdown">
-        <a href="gifts.html">Gifting</a>
-        <ul class="dropdown-menu">
-          <li><a href="gifts.html?for=mother">Mother</a></li>
-          <li><a href="gifts.html?for=sister">Sister</a></li>
-          <li><a href="gifts.html?for=wife">Wife</a></li>
-          <li><a href="gifts.html?for=friend">Friend</a></li>
-        </ul>
-      </li>
+
 
       <li><a href="contact.html">Contact Us</a></li>
       <li><a href="about.html">About Us</a></li>
@@ -1221,11 +1249,22 @@ footer {
 </script>
 
 
+    <!-- Floating WhatsApp and Phone Icons -->
+  <div class="floating-icons">
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/918482859816" target="_blank" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
+    <!-- Phone Icon -->
+    <a href="tel:8482859816" class="phone-icon" title="Call Now">
+      <i class="fas fa-phone"></i>
+    </a>
+  </div>
 <!-- Responsive Banner Section -->
 <section id="main-banner">
   <div class="banner-container">
-    <img src="IMAGES/earring banner.jpg" alt="Stunning Bracelets - Special Prices" />
+    <img src="IMAGES/ER banner.jpg" alt="Stunning Bracelets - Special Prices" />
   </div>
 </section>
 <section id="product1" class="section4">
@@ -1240,50 +1279,50 @@ footer {
     {
       id: 17,
       name: "Silver Simple Earrings",
-      price: 4700.00,
-      image: "IMAGES/earrings 11.jpg"
+      price: 1278.00,
+      image: "IMAGES/ER6.jpg"
     },
     {
       id: 18,
       name: "Elegant Band",
-      price: 4700.00,
-      image: "IMAGES/earrings444.jpg"
+      price: 1588.00,
+      image: "IMAGES/ER7.jpg"
     },
     {
       id: 19,
       name: "Classic Curve Ring",
-      price: 4700.00,
-      image: "IMAGES/earrings1010.webp"
+      price: 1588.00,
+      image: "IMAGES/ER2.jpg"
     },
     {
       id: 20,
       name: "Gem Accent Ring",
-      price: 4700.00,
-      image: "IMAGES/earrings22.webp"
+      price: 2638.00,
+      image: "IMAGES/ER4.jpg"
     },
     {
       id: 21,
       name: "Gem Accent Ring",
-      price: 8800.00,
-      image: "IMAGES/earrings44.webp"
+      price: 2328.00,
+      image: "IMAGES/ER1.jpg"
     },
     {
       id: 22,
       name: "Gem Accent Ring",
-      price: 8800.00,
-      image: "IMAGES/earrings55.webp"
+      price: 2048.00,
+      image: "IMAGES/ER3.jpg"
     },
     {
       id: 23,
       name: "Gem Accent Ring",
-      price: 8800.00,
-      image: "IMAGES/earrings66.jpg"
+      price: 1098.00,
+      image: "IMAGES/ER8.jpg"
     },
     {
       id: 24,
       name: "Gem Accent Ring",
-      price: 8800.00,
-      image: "IMAGES/earrings77.avif"
+      price: 1328.00,
+      image: "IMAGES/ER9.jpg"
     }
   ];
   const container = document.getElementById("product-list");
@@ -1467,8 +1506,10 @@ document.addEventListener('DOMContentLoaded', function() {
          <div class="footer-section">
   <h3>Follow</h3>
   <ul class="social-icons">
-    <li><a href="https://www.instagram.com/oy_jewells/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a></li>
-    <li><a href="https://www.facebook.com/profile.php?id=61578134903237" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="https://www.instagram.com/oy_jewells/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a></li>
+<li><a href="https://www.facebook.com/profile.php?id=61578134903237" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="https://wa.me/918482859816" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+<li><a href="https://pinterest.com/oy_jewells" target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
   </ul>
 </div>
         </div>

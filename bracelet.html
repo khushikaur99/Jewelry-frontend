@@ -935,6 +935,43 @@ footer {
       margin-top: 4px;
     }
   }
+
+
+  /* Floating buttons */
+    .floating-icons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .floating-icons a {
+      background-color: #25D366; /* WhatsApp green */
+      color: white;
+      padding: 14px;
+      border-radius: 50%;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease;
+    }
+
+    .floating-icons a.phone-icon {
+      background-color: #007bff; /* Phone blue */
+    }
+
+    .floating-icons a:hover {
+      opacity: 0.8;
+    }
+
+    .floating-icons i {
+      font-size: 20px;
+    }
   </style>
 
 
@@ -979,15 +1016,7 @@ footer {
           <li><a href="casual.html">Casual</a></li>
         </ul>
       </li>
-      <li class="dropdown">
-        <a href="gifts.html">Gifting</a>
-        <ul class="dropdown-menu">
-          <li><a href="gifts.html?for=mother">Mother</a></li>
-          <li><a href="gifts.html?for=sister">Sister</a></li>
-          <li><a href="gifts.html?for=wife">Wife</a></li>
-          <li><a href="gifts.html?for=friend">Friend</a></li>
-        </ul>
-      </li>
+  
 
       <li><a href="contact.html">Contact Us</a></li>
       <li><a href="about.html">About Us</a></li>
@@ -1063,7 +1092,18 @@ footer {
 </script>
 
 
+    <!-- Floating WhatsApp and Phone Icons -->
+  <div class="floating-icons">
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/918482859816" target="_blank" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
+    <!-- Phone Icon -->
+    <a href="tel:8482859816" class="phone-icon" title="Call Now">
+      <i class="fas fa-phone"></i>
+    </a>
+  </div>
 
 
 
@@ -1085,18 +1125,14 @@ footer {
 
 <script>
   const productData = [
-    {id: 38, name: "Adorning Your Wrist", price: 6400.00, image: "IMAGES/bracelet12.jpg"},
-    {id: 39, name: "Adorning Your Wrist", price: 6400.00, image: "IMAGES/bracelet5.jpeg"},
-    {id: 40, name: "Adorning Your Wrist", price: 6400.00, image: "IMAGES/bracelet6.jpg"},
-    {id: 41, name: "Adorning Your Wrist", price: 6400.00, image: "IMAGES/bracelet11.jpg"},
-    {id: 42, name: "Adorning Your Wrist", price: 6400.00, image: "IMAGES/bracelet8.jpeg"},
-    {id: 43, name: "Adorning Your Wrist", price: 6400.00, image: "IMAGES/bracelet111.webp"},
-    {id: 44, name: "Adorning Your Wrist", price: 6400.00, image: "IMAGES/bracelet7.webp"},
-    {id: 45, name: "Adorning Your Wrist", price: 6400.00, image: "IMAGES/bracelet1.jpeg"},
-    {id: 46, name: "Adorning Your Wrist", price: 6400.00, image: "IMAGES/bracelet10.jpeg"},
-    {id: 47, name: "Adorning Your Wrist", price: 6400.00, image: "IMAGES/bracelet9.jpeg"},
-    {id: 48, name: "Adorning Your Wrist", price: 6400.00, image: "IMAGES/bracelet4.webp"},
-    {id: 49, name: "Adorning Your Wrist", price: 6400.00, image: "IMAGES/bracelet3.jpeg"}
+    {id: 38, name: "Adorning Your Wrist", price: 818.00, image: "IMAGES/BR1.jpg"},
+    {id: 39, name: "Adorning Your Wrist", price: 628.00, image: "IMAGES/BR2.jpg"},
+    {id: 40, name: "Adorning Your Wrist", price: 1048.00, image: "IMAGES/BR3.jpg"},
+    {id: 41, name: "Adorning Your Wrist", price:  738.00, image: "IMAGES/BR4.jpg"},
+    {id: 42, name: "Adorning Your Wrist", price: 1218.00, image: "IMAGES/BR5.jpg"},
+    {id: 43, name: "Adorning Your Wrist", price:  1108.00, image: "IMAGES/BR6.jpg"},
+    {id: 44, name: "Adorning Your Wrist", price: 918, image: "IMAGES/BR7.jpg"},
+    
   ];
 
   const container = document.getElementById("product-list");
@@ -1263,7 +1299,9 @@ document.addEventListener('DOMContentLoaded', function() {
   <h3>Follow</h3>
   <ul class="social-icons">
     <li><a href="https://www.instagram.com/oy_jewells/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a></li>
-    <li><a href="https://www.facebook.com/profile.php?id=61578134903237" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="https://www.facebook.com/profile.php?id=61578134903237" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="https://wa.me/918482859816" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+<li><a href="https://pinterest.com/oy_jewells" target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
   </ul>
 </div>
         </div>
