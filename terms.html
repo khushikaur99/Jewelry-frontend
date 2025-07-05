@@ -561,6 +561,7 @@ header {
     margin-top: 5px;
   }
 }
+
 footer {
   background-color: #020202;
   font-family: spantax;
@@ -626,15 +627,33 @@ footer {
   transition: color 0.2s ease;
 }
 
-.social-icons {
+/* Social Icons - Horizontal layout for all devices */
+.footer-section .social-icons {
   display: flex;
   gap: 12px;
-  text-align: center;
+  margin-top: 8px;
+  margin-right: 20px;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap; /* Allow wrapping if needed */
 }
 
-.social-icons li a {
+.footer-section .social-icons li a {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   font-size: 18px;
-  margin-right: 20px;
+  transition: all 0.3s ease;
+}
+
+.footer-section .social-icons li a:hover {
+  transform: scale(1.1);
+  background-color: #f0f0f0;
 }
 
 .footer-bottom {
@@ -642,7 +661,6 @@ footer {
   padding: 2px 2px;
   font-size: 12px;
   color: #888;
-
 }
 
 /* Responsive Styles */
@@ -676,8 +694,10 @@ footer {
     text-align: center;
   }
   
-  .social-icons {
+  /* Keep social icons horizontal on mobile */
+  .footer-section .social-icons {
     justify-content: center;
+    margin-right: 0;
   }
   
   .footer-bottom {
@@ -685,17 +705,17 @@ footer {
     padding: 10px 15px;
     font-size: 11px;
   }
-}/* Center the footer bottom text */
-.footer-bottom .footer-container {
-  justify-content: center;
-  display: flex;
-}
-
-/* Hide Shop section on smaller screens */
-@media (max-width: 768px) {
+  
+  /* Hide Shop section on smaller screens */
   .footer-section:nth-child(1) {
     display: none;
   }
+}
+
+/* Center the footer bottom text */
+.footer-bottom .footer-container {
+  justify-content: center;
+  display: flex;
 }
 
 /* Overall styling for the terms section */

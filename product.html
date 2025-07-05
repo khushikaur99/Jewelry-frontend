@@ -370,7 +370,121 @@
     font-weight: bold;
   }
   
+/* Mobile Responsive Styles (max-width: 600px) */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  
+  .container {
+    padding: 15px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .header-icons {
+    top: 15px;
+    right: 15px;
+    padding: 8px 12px;
+    gap: 15px;
+  }
+  
+  .product-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-size: 1.4em;
+  }
+  
+  .old-price {
+    font-size: 1em;
+  }
+  
+  .discount-badge {
+    font-size: 0.8em;
+  }
+  
+  .rating {
+    margin-bottom: 10px;
+  }
+  
+  .size-buttons {
+    justify-content: center;
+  }
+  
+  .size-btn {
+    min-width: 35px;
+    height: 35px;
+    font-size: 0.9em;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .action-buttons button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+  }
+  
+  .wishlist-btn {
+    width: 100%;
+    padding: 12px;
+    justify-content: center;
+  }
+  
+  .sub-images img {
+    width: calc(33.33% - 7px); /* 3 images per row on small screens */
+  }
+  
+  .description {
+    font-size: 0.95em;
+  }
+  
+  .features {
+    padding-left: 15px;
+  }
+  
+  .features li {
+    font-size: 0.9em;
+    margin-bottom: 6px;
+  }
+}
 
+/* Very small devices (max-width: 400px) */
+@media (max-width: 400px) {
+  .header-icons {
+    top: 10px;
+    right: 10px;
+    gap: 10px;
+    padding: 6px 10px;
+  }
+  
+  .icon-link svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .badge {
+    width: 14px;
+    height: 14px;
+    font-size: 9px;
+  }
+  
+  .product-title {
+    font-size: 1.3em;
+  }
+  
+  .sub-images img {
+    width: calc(50% - 5px); /* 2 images per row on very small screens */
+  }
+}
 
   </style>
 </head>

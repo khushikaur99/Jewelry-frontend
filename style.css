@@ -4,22 +4,21 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 /* Popup styles */
 .popup-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 110%;
-  background-color: rgba(0,0,0,0.5);
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-   opacity: 0;
+  opacity: 0;
   pointer-events: none;
-  transition: opacity 0.8ss ease;
+  transition: opacity 0.3s ease;
 }
 
 .popup-content {
@@ -27,119 +26,117 @@
   display: flex;
   width: 900px;
   max-width: 90%;
-  height: 450px;
+  max-height: 90vh;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
-    transform: scale(0.7);
+  transform: scale(0.9);
   opacity: 0;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
 .popup-left img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  max-height: 480px;
 }
 
 .popup-left {
   flex: 1;
+  min-height: 0;
 }
 
 .popup-right {
   flex: 1;
-  padding: 50px;
+  padding: 30px;
   color: #fff;
-  background-color: #b57e55;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.popup-right-content {
+  flex: 3;
+  padding-right: 5px;
 }
 
 .popup-right .intro {
   letter-spacing: 2px;
   font-size: 12px;
   text-transform: uppercase;
-  margin-left: 20%;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .popup-right h2 {
-  font-size: 36px;
-  margin: 10px 0 20px;
+  font-size: 28px;
+  margin: 0 0 20px;
   font-weight: 400;
-  line-height: 1.9;
-   margin-left: 7%;
+  line-height: 1.4;
+  text-align: center;
 }
 
-
-/* When active (shown) */
-.popup-overlay.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Scale and fade in popup content */
-.popup-overlay.active .popup-content {
-  transform: scale(1);
-  opacity: 1;
-}
 .signup-btn {
-  background-color: #000000; /* gold tone */
+  background-color: #000000;
   color: #fff;
-  padding: 12px 0px;
-  font-size: 18px;
+  padding: 12px 0;
+  width: 60%;
+  font-size: 16px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  margin-top: 15px;
-   margin-right: 100px;
-   margin-left: 100px;
-  transition: background-color 0.3s, transform 0.3s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  transition: all 0.3s;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .signup-btn:hover {
-  background-color: #ffffff; /* darker gold on hover */
+  background-color: #ffffff;
   color: #000;
   transform: scale(1.05);
 }
 
-
-
 .social-icons {
-  margin-top: 30px;
+  margin: 25px 0 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  align-items: center;
+  gap: 10px;
 }
-.social-icons span{
-  margin-top: 3%;
-  font-size: 19px;
-}
-.social-icons a {
 
+.social-icons span {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.social-icons a {
   background-color: #ffffff;
   padding: 10px;
   border-radius: 50%;
   font-size: 18px;
-  width: 50px;
-  height: 50px;
-  transition: background-color 0.3s, transform 0.3s;
-}
-.social-icons a i{
-  font-size: 23px;
-  color:#080808;
-  margin-left: 15%;
-margin-top: 12%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
 }
 
+.social-icons a i {
+  font-size: 18px;
+  color: #080808;
+}
 
 .social-icons a:hover {
-  background-color: #ffffff; /* gold or highlight color */
-  color: #000;
   transform: scale(1.1);
+  background-color: #f0f0f0;
 }
 
-
-/* Close Button */
 .close-btn {
   position: absolute;
   top: 10px;
@@ -149,30 +146,41 @@ margin-top: 12%;
   border: none;
   color: white;
   cursor: pointer;
+  z-index: 10;
 }
-/* Tablet & Mobile Layout */
+
+/* Tablet Layout */
 @media (max-width: 768px) {
   .popup-content {
     flex-direction: column;
-    max-height: 85vh; /* Slightly smaller on mobile */
+    height: auto;
+    max-height: 90vh;
   }
   
   .popup-left {
     flex: none;
-    height: 200px; /* Fixed height for image section */
+    height: 200px;
   }
   
   .popup-right {
-    overflow-y: auto; /* Make content scrollable if needed */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    padding: 25px 20px;
+  }
+  
+  .popup-right h2 {
+    font-size: 24px;
+  }
+  
+  .signup-btn {
+    width: 70%;
+    font-size: 15px;
   }
 }
 
-/* Mobile Optimization */
+/* Mobile Layout */
 @media (max-width: 480px) {
   .popup-content {
+    max-width: 95%;
     max-height: 95vh;
-    border-radius: 0;
   }
   
   .popup-left {
@@ -183,44 +191,48 @@ margin-top: 12%;
     padding: 20px 15px;
   }
   
+  .popup-right h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
   .signup-btn {
-    margin: 25px 50px;
-    
+    width: 80%;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  
+  .social-icons a {
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+  }
+  
+  .social-icons a i {
+    font-size: 16px;
   }
 }
 
-/* Ensure content is properly contained */
-.popup-left {
-  flex: 1;
-  min-height: 0; /* Fix for flexbox overflow */
-}
-
-.popup-right {
-  flex: 1;
-  padding: 30px;
-  color: #fff;
-  min-height: 0; /* Fix for flexbox overflow */
-  display: flex;
-  flex-direction: column;
-}
-
-/* Scrollable content area */
-.popup-right-content {
-  overflow-y: auto;
-  flex: 1;
-  padding-right: 5px; /* Prevent content from touching scrollbar */
-}
-
-/* Custom scrollbar for popup */
-.popup-right-content::-webkit-scrollbar {
+/* Custom scrollbar */
+.popup-right::-webkit-scrollbar {
   width: 5px;
 }
 
-.popup-right-content::-webkit-scrollbar-thumb {
+.popup-right::-webkit-scrollbar-thumb {
   background: rgba(255,255,255,0.3);
   border-radius: 5px;
 }
 
+/* Active state */
+.popup-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-overlay.active .popup-content {
+  transform: scale(1);
+  opacity: 1;
+}
 
 header {
   width: 100%;
@@ -1675,18 +1687,17 @@ footer {
   transition: color 0.2s ease;
 }
 
-/* Ensure the FOLLOW section is vertically aligned */
+/* Social Icons - Horizontal layout for all devices */
 .footer-section .social-icons {
   display: flex;
   gap: 12px;
-  align-items: center;
-  margin-top: 8px; /* Adjust this to control spacing from "FOLLOW" */
-  margin-right: 130px;
+  margin-top: 8px;
+  margin-right: 20px;
   padding: 0;
   list-style: none;
+  flex-wrap: wrap; /* Allow wrapping if needed */
 }
 
-/* Make icons perfectly circular and centered */
 .footer-section .social-icons li a {
   width: 40px;
   height: 40px;
@@ -1700,12 +1711,16 @@ footer {
   transition: all 0.3s ease;
 }
 
+.footer-section .social-icons li a:hover {
+  transform: scale(1.1);
+  background-color: #f0f0f0;
+}
+
 .footer-bottom {
   border-top: 1px solid #333;
   padding: 2px 2px;
   font-size: 12px;
   color: #888;
-
 }
 
 /* Responsive Styles */
@@ -1739,8 +1754,10 @@ footer {
     text-align: center;
   }
   
-  .social-icons {
+  /* Keep social icons horizontal on mobile */
+  .footer-section .social-icons {
     justify-content: center;
+    margin-right: 0;
   }
   
   .footer-bottom {
@@ -1748,17 +1765,17 @@ footer {
     padding: 10px 15px;
     font-size: 11px;
   }
-}/* Center the footer bottom text */
-.footer-bottom .footer-container {
-  justify-content: center;
-  display: flex;
-}
-
-/* Hide Shop section on smaller screens */
-@media (max-width: 768px) {
+  
+  /* Hide Shop section on smaller screens */
   .footer-section:nth-child(1) {
     display: none;
   }
+}
+
+/* Center the footer bottom text */
+.footer-bottom .footer-container {
+  justify-content: center;
+  display: flex;
 }
 
 #page-header{

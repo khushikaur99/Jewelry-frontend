@@ -810,7 +810,8 @@ margin-left: 150px;
   }
 
 
-  footer {
+  
+footer {
   background-color: #020202;
   font-family: spantax;
 }
@@ -875,18 +876,17 @@ margin-left: 150px;
   transition: color 0.2s ease;
 }
 
-/* Ensure the FOLLOW section is vertically aligned */
+/* Social Icons - Horizontal layout for all devices */
 .footer-section .social-icons {
   display: flex;
   gap: 12px;
-  align-items: center;
-  margin-top: 8px; /* Adjust this to control spacing from "FOLLOW" */
-  margin-right: 130px;
+  margin-top: 8px;
+  margin-right: 20px;
   padding: 0;
   list-style: none;
+  flex-wrap: wrap; /* Allow wrapping if needed */
 }
 
-/* Make icons perfectly circular and centered */
 .footer-section .social-icons li a {
   width: 40px;
   height: 40px;
@@ -900,12 +900,16 @@ margin-left: 150px;
   transition: all 0.3s ease;
 }
 
+.footer-section .social-icons li a:hover {
+  transform: scale(1.1);
+  background-color: #f0f0f0;
+}
+
 .footer-bottom {
   border-top: 1px solid #333;
   padding: 2px 2px;
   font-size: 12px;
   color: #888;
-
 }
 
 /* Responsive Styles */
@@ -939,8 +943,10 @@ margin-left: 150px;
     text-align: center;
   }
   
-  .social-icons {
+  /* Keep social icons horizontal on mobile */
+  .footer-section .social-icons {
     justify-content: center;
+    margin-right: 0;
   }
   
   .footer-bottom {
@@ -948,18 +954,19 @@ margin-left: 150px;
     padding: 10px 15px;
     font-size: 11px;
   }
-}/* Center the footer bottom text */
+  
+  /* Hide Shop section on smaller screens */
+  .footer-section:nth-child(1) {
+    display: none;
+  }
+}
+
+/* Center the footer bottom text */
 .footer-bottom .footer-container {
   justify-content: center;
   display: flex;
 }
 
-/* Hide Shop section on smaller screens */
-@media (max-width: 768px) {
-  .footer-section:nth-child(1) {
-    display: none;
-  }
-}
 
 
 
