@@ -1036,15 +1036,53 @@ function validatePINCode(zip) {
     const stateInput = document.getElementById('state');
     const cityLoading = document.getElementById('city-loading');
     
-    const pinCodeData = {
-        '411001': { city: 'Pune', state: 'Maharashtra' },
-        '400001': { city: 'Mumbai', state: 'Maharashtra' },
-        '110001': { city: 'New Delhi', state: 'Delhi' },
-        '600001': { city: 'Chennai', state: 'Tamil Nadu' },
-        '700001': { city: 'Kolkata', state: 'West Bengal' },
-        '500001': { city: 'Hyderabad', state: 'Telangana' },
-        '560001': { city: 'Bengaluru', state: 'Karnataka' }
-    };
+ const pinCodeData = {
+    '411001': { city: 'Pune', state: 'Maharashtra' },         // Pune H.O., Camp
+    '411002': { city: 'Pune', state: 'Maharashtra' },         // Shukrawar Peth
+    '411003': { city: 'Pune', state: 'Maharashtra' },         // Khadki
+    '411004': { city: 'Pune', state: 'Maharashtra' },         // Deccan Gymkhana
+    '411005': { city: 'Pune', state: 'Maharashtra' },         // Shivajinagar
+    '411006': { city: 'Pune', state: 'Maharashtra' },         // Yerwada
+    '411007': { city: 'Pune', state: 'Maharashtra' },         // Aundh
+    '411008': { city: 'Pune', state: 'Maharashtra' },         // Gokhalenagar
+    '411009': { city: 'Pune', state: 'Maharashtra' },         // Bibvewadi
+    '411010': { city: 'Pune', state: 'Maharashtra' },         // Market Yard
+    '411011': { city: 'Pune', state: 'Maharashtra' },         // Gultekdi
+    '411012': { city: 'Pune', state: 'Maharashtra' },         // Kothrud
+    '411013': { city: 'Pune', state: 'Maharashtra' },         // Hadapsar
+    '411014': { city: 'Pune', state: 'Maharashtra' },         // Wanowrie
+    '411015': { city: 'Pune', state: 'Maharashtra' },         // Vishrantwadi
+    '411017': { city: 'Pune', state: 'Maharashtra' },         // Kalewadi
+    '411018': { city: 'Pune', state: 'Maharashtra' },         // Dapodi
+    '411019': { city: 'Pune', state: 'Maharashtra' },         // Pimpri
+    '411020': { city: 'Pune', state: 'Maharashtra' },         // F.C. Road
+    '411021': { city: 'Pune', state: 'Maharashtra' },         // Warje
+    '411022': { city: 'Pune', state: 'Maharashtra' },         // Katraj
+    '411023': { city: 'Pune', state: 'Maharashtra' },         // Sinhagad Road
+    '411024': { city: 'Pune', state: 'Maharashtra' },         // Dhankawadi
+    '411027': { city: 'Pune', state: 'Maharashtra' },         // Aundh Camp
+    '411028': { city: 'Pune', state: 'Maharashtra' },         // Chinchwadgaon
+    '411029': { city: 'Pune', state: 'Maharashtra' },         // Nigdi
+    '411030': { city: 'Pune', state: 'Maharashtra' },         // Bhosari
+    '411033': { city: 'Pune', state: 'Maharashtra' },         // Wakad
+    '411035': { city: 'Pune', state: 'Maharashtra' },         // Akurdi
+    '411038': { city: 'Pune', state: 'Maharashtra' },         // Pimple Gurav
+    '411040': { city: 'Pune', state: 'Maharashtra' },         // AFMC Wanowrie
+    '411041': { city: 'Pune', state: 'Maharashtra' },         // Ambegaon BK
+    '411042': { city: 'Pune', state: 'Maharashtra' },         // Bhavani Peth
+    '411043': { city: 'Pune', state: 'Maharashtra' },         // Kharadi
+    '411044': { city: 'Pune', state: 'Maharashtra' },         // PCNTDA
+    '411045': { city: 'Pune', state: 'Maharashtra' },         // Pashan
+    '411046': { city: 'Pune', state: 'Maharashtra' },         // Vadgaon Sheri
+    '411047': { city: 'Pune', state: 'Maharashtra' },         // Nanded
+    '411048': { city: 'Pune', state: 'Maharashtra' },         // Kondhwa
+    '411051': { city: 'Pune', state: 'Maharashtra' },         // Anandnagar
+    '411052': { city: 'Pune', state: 'Maharashtra' },         // Bavdhan
+    '411057': { city: 'Pune', state: 'Maharashtra' },         // Hinjawadi
+    '411058': { city: 'Pune', state: 'Maharashtra' },         // Moshi
+    '411062': { city: 'Pune', state: 'Maharashtra' }          // Chikhali
+};
+
     
     if (pinCodeData[zip]) {
         cityLoading.style.display = 'block';
@@ -1209,10 +1247,10 @@ function setupCouponCode() {
 // ==================== ORDER TOTAL CALCULATION ====================
 function updateOrderTotal() {
     const subtotal = currentSubtotal;
-    const shipping = parseFloat(document.getElementById('shipping').textContent) || 0;
-    const tax = parseFloat(document.getElementById('tax').textContent) || 0;
+    const shipping = 0; // No shipping charge
+    const tax = 0;      // No tax
     const discount = currentDiscount;
-    
+
     const total = subtotal + shipping + tax - discount;
     document.getElementById('total').textContent = total.toLocaleString('en-IN', { minimumFractionDigits: 2 });
 }
@@ -1367,11 +1405,11 @@ function processOrder() {
 
 // ==================== INITIALIZATION ====================
 function initializeShipping() {
-    document.getElementById('shipping').textContent = '100.00';
-    const tax = currentSubtotal * 0.05;
-    document.getElementById('tax').textContent = tax.toLocaleString('en-IN', { minimumFractionDigits: 2 });
+    document.getElementById('shipping').textContent = '0.00';
+    document.getElementById('tax').textContent = '0.00';
     updateOrderTotal();
 }
+
 </script>
 </body>
 </html>

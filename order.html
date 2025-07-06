@@ -389,160 +389,162 @@
 }
 
 
-  footer {
-      background-color: #020202;
-      font-family: spantax;
-  }
+ 
+footer {
+  background-color: #020202;
+  font-family: spantax;
+}
 
-  .footer-wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-  }
+.footer-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+.footer-container {
+  padding: 20px;
+  display: flex;
+  gap: 110px;
+}
+
+.footer-logo-section {
+  flex: 0 0 120px;
+}
+
+.footer-logo {
+  width: 100%;
+  height: auto;
+}
+
+.footer-content {
+  flex: 1;
+}
+
+.footer-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 120px;
+}
+
+.footer-section h3 {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #fff6f6;
+  text-transform: uppercase;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 19px;
+  transition: color 0.2s ease;
+}
+
+/* Social Icons - Horizontal layout for all devices */
+.footer-section .social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  margin-right: 20px;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+.footer-section .social-icons li a {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.footer-section .social-icons li a:hover {
+  transform: scale(1.1);
+  background-color: #f0f0f0;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding: 2px 2px;
+  font-size: 12px;
+  color: #888;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .footer-container {
-      padding: 20px;
-      display: flex;
-      gap: 110px;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
   }
-
+  
   .footer-logo-section {
-      flex: 0 0 120px;
+    flex: 0 0 auto;
+    text-align: center;
+    margin-bottom: 5px;
   }
-
+  
   .footer-logo {
-      width: 100%;
-      height: auto;
+    max-width: 100px;
   }
-
-  .footer-content {
-      flex: 1;
-  }
-
+  
   .footer-sections {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-between;
+    flex-direction: column;
+    gap: 15px;
   }
-
+  
+  .company-section {
+    display: none;
+  }
+  
   .footer-section {
-      flex: 1;
-      min-width: 120px;
+    text-align: center;
   }
-
-  .footer-section h3 {
-      font-size: 14px;
-      margin-bottom: 12px;
-      color: #fff6f6;
-      text-transform: uppercase;
-  }
-
-  .footer-section ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-  }
-
-  .footer-section ul li {
-      margin-bottom: 8px;
-  }
-
-  .footer-section ul li a {
-      text-decoration: none;
-      color: #ffffff;
-      font-size: 19px;
-      transition: color 0.2s ease;
-  }
-
-  /* Ensure the FOLLOW section is vertically aligned */
+  
+  /* Keep social icons horizontal on mobile */
   .footer-section .social-icons {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      margin-top: 8px;
-      /* Adjust this to control spacing from "FOLLOW" */
-      margin-right: 130px;
-      padding: 0;
-      list-style: none;
+    justify-content: center;
+    margin-right: 0;
   }
-
-  /* Make icons perfectly circular and centered */
-  .footer-section .social-icons li a {
-      width: 40px;
-      height: 40px;
-      background-color: white;
-      color: black;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      font-size: 18px;
-      transition: all 0.3s ease;
-  }
-
+  
   .footer-bottom {
-      border-top: 1px solid #333;
-      padding: 2px 2px;
-      font-size: 12px;
-      color: #888;
-
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 11px;
   }
-
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-      .footer-container {
-          flex-direction: column;
-          gap: 20px;
-          padding: 15px;
-      }
-
-      .footer-logo-section {
-          flex: 0 0 auto;
-          text-align: center;
-          margin-bottom: 5px;
-      }
-
-      .footer-logo {
-          max-width: 100px;
-      }
-
-      .footer-sections {
-          flex-direction: column;
-          gap: 15px;
-      }
-
-      .company-section {
-          display: none;
-      }
-
-      .footer-section {
-          text-align: center;
-      }
-
-      .social-icons {
-          justify-content: center;
-      }
-
-      .footer-bottom {
-          text-align: center;
-          padding: 10px 15px;
-          font-size: 11px;
-      }
-  }
-
-  /* Center the footer bottom text */
-  .footer-bottom .footer-container {
-      justify-content: center;
-      display: flex;
-  }
-
+  
   /* Hide Shop section on smaller screens */
-  @media (max-width: 768px) {
-      .footer-section:nth-child(1) {
-          display: none;
-      }
+  .footer-section:nth-child(1) {
+    display: none;
   }
+}
 
+/* Center the footer bottom text */
+.footer-bottom .footer-container {
+  justify-content: center;
+  display: flex;
+}
 
   /* Order Page Styles */
 .container {
@@ -1582,65 +1584,65 @@
 </div>
 
   <!-- Your footer would go here -->
-  <footer>
-    <div class="footer-wrapper">
-      <div class="footer-container">
-        <div class="footer-logo-section">
-          <img src="../IMAGES/01.png" alt="Palmonas Logo" class="footer-logo">
-        </div>
-
-        <div class="footer-content">
-          <div class="footer-sections">
-            <div class="footer-section">
-              <h3>Shop</h3>
-              <ul>
-                <li><a href="necklace.html">Necklaces</a></li>
-                <li><a href="ring.html">Rings</a></li>
-                <li><a href="brac.html">Bracelets</a></li>
-                <li><a href="ear.html">Earrings</a></li>
-              </ul>
-            </div>
-
-            <div class="footer-section company-section">
-              <h3>Company</h3>
-              <ul>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/store">Store Location</a></li>
-                <li><a href="mailto:support@palmonas.com">Contact Us</a></li>
-              </ul>
-            </div>
-
-            <div class="footer-section">
-              <h3>Legal</h3>
-              <ul>
-                <li><a href="faqs.html">FAQS</a></li>
-                <li><a href="disclaimer.html">Disclaimer</a></li>
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                <li><a href="shipping.html">Shipping Policy</a></li>
-                <li><a href="cancel.html">Cancellation Policy</a></li>
-                <li><a href="terms.html">Terms & Conditions</a></li>
-              </ul>
-            </div>
-
-            <div class="footer-section">
-              <h3>Follow</h3>
-              <ul class="social-icons">
-                <li><a href="https://instagram.com/palmonas" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://facebook.com/palmonas" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://pinterest.com/palmonas" target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+ <footer>
+  <div class="footer-wrapper">
+    <div class="footer-container">
+      <div class="footer-logo-section">
+        <img src="IMAGES/01.png" alt="Palmonas Logo" class="footer-logo">
       </div>
+      
+      <div class="footer-content">
+        <div class="footer-sections">
+          <div class="footer-section">
+            <h3>Shop</h3>
+            <ul>
+              <li><a href="neck.html">Necklaces</a></li>
+              <li><a href="rings.html">Rings</a></li>
+              <li><a href="bracelet.html">Bracelets</a></li>
+              <li><a href="earring.html">Earrings</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section company-section">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Legal</h3>
+            <ul>
+               <li><a href="faqs.html">FAQS</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="shipping.html">Shipping Policy</a></li>
+          <li><a href="cancel.html">Cancellation Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+            </ul>
+          </div>
 
-      <div class="footer-bottom">
-        <div class="footer-container">
-          &copy; 2025 Kunash Media Solutions. All rights reserved.
-        </div>
+         <div class="footer-section">
+  <h3>Follow</h3>
+  <ul class="social-icons">
+   <li><a href="https://www.instagram.com/oy_jewells/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a></li>
+<li><a href="https://www.facebook.com/profile.php?id=61578134903237" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="https://wa.me/918482859816" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+<li><a href="https://pinterest.com/oy_jewells" target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+    
+    <div class="footer-bottom">
+      <div class="footer-container">
+        &copy; 2025 Kunash Media Solutions. All rights reserved.
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
   
 

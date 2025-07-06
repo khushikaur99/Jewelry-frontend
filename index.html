@@ -127,6 +127,40 @@
     document.querySelector('.nav-links').classList.toggle('active');
   }
 </script>
+
+
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+  }
+
+  // Close menu when clicking a sub-dropdown item (any screen size)
+  document.querySelectorAll('.dropdown-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.remove('active');
+    });
+  });
+
+  // Close menu when scrolling
+  window.addEventListener('scroll', () => {
+    if (window.innerWidth <= 768) { // Only close on mobile
+      document.querySelector('.nav-links').classList.remove('active');
+    }
+  });
+
+  // Close menu when clicking outside (mobile only)
+  document.addEventListener('click', (event) => {
+    const navLinks = document.querySelector('.nav-links');
+    const hamburger = document.getElementById('hamburger');
+    
+    if (navLinks.classList.contains('active') && 
+        !event.target.closest('.nav-links') && 
+        !event.target.closest('#hamburger')) {
+      navLinks.classList.remove('active');
+    }
+  });
+</script>
+
  <!-- Floating WhatsApp and Phone Icons -->
   <div class="floating-icons">
     <!-- WhatsApp Icon -->
