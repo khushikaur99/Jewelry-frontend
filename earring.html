@@ -1143,6 +1143,139 @@ footer {
     .floating-icons i {
       font-size: 20px;
     }
+/* Discount badge styling */
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #e90000;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  z-index: 1;
+  display: flex;
+  margin-left: 7px;
+  margin-top: 7px;
+  flex-direction: column;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.discount-percent {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.discount-amount {
+  font-size: 11px;
+  opacity: 0.9;
+  line-height: 1.2;
+}
+
+/* Price styling */
+.price-container {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0;
+  gap: 2px;
+}
+
+.new-price {
+  color: #088178;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.old-price-container {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-bottom: 2px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.dash {
+  color: #999;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+/* Product card */
+.pro {
+  position: relative;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: left; /* Default alignment */
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .pro {
+    text-align: center; /* Center all text content */
+    padding: 15px 10px; /* Slightly more padding */
+  }
+
+  .des {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center children horizontally */
+  }
+
+  .price-container {
+    align-items: center; /* Center price elements */
+  }
+
+  .old-price-container {
+    margin-left: 0; /* Remove the large left margin */
+    justify-content: center; /* Center the old price elements */
+  }
+
+  .discount-badge {
+    left: 25%;
+    transform: translateX(-50%);
+    top: 5px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  /* Adjust button alignment if needed */
+  .add-to-cart, .buy-now {
+    width: 80%; /* Make buttons slightly narrower */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+  .pro {
+    padding: 12px 8px;
+  }
+  
+  .new-price, .old-price {
+    font-size: 16px; /* Slightly smaller font */
+  }
+  
+  .discount-badge {
+    padding: 4px 6px;
+  }
+  
+  .discount-percent {
+    font-size: 12px;
+  }
+  
+  .discount-amount {
+    font-size: 10px;
+  }
+}
   </style>
 <!-- HEADER -->
 <header id="header">
@@ -1229,7 +1362,7 @@ footer {
   </nav>
 
  <div class="search-bar" >
-  <input type="text" placeholder="Search for jewelry..." id="searchInput">
+  <input type="text" placeholder="Search For Jewellery..." id="searchInput">
   <div class="search-suggestions" id="searchSuggestions"></div>
 </div>
 
@@ -1287,60 +1420,79 @@ footer {
   const productData = [
     {
       id: 17,
-      name: "Silver Simple Earrings",
-      price: 1278.00,
+      name: "Silver Tone Green Crystal Dangle Earrings",
+      oldPrice: 127800,
+      price: 828.00,
       image: "IMAGES/ER6.JPG"
     },
     {
       id: 18,
-      name: "Elegant Band",
-      price: 1588.00,
+      name: "Timeless Peal & Crystal Everyday Studs Earrings",
+      oldPrice: 1218.00,
+      price: 788.00,
       image: "IMAGES/ER7.JPG"
     },
     {
       id: 19,
-      name: "Classic Curve Ring",
-      price: 1588.00,
+      name: "Halo Circle Stud Earrings",
+      oldPrice: 1588.00,
+      price: 1028.00,
       image: "IMAGES/ER2.JPG"
     },
     {
       id: 20,
-      name: "Gem Accent Ring",
-      price: 2638.00,
+      name: "Leaf Above the Circle Design Earrings",
+      oldPrice: 2638.00,
+      price: 1708.00,
       image: "IMAGES/ER4.JPG"
     },
     {
       id: 21,
-      name: "Gem Accent Ring",
-      price: 2328.00,
+      name: "Revolving Jhumka Hoop Earrings ",
+      oldPrice: 2328.00,
+      price: 1508.00,
       image: "IMAGES/ER1.JPG"
     },
     {
       id: 22,
-      name: "Gem Accent Ring",
-      price: 2048.00,
+      name: "Glamour Geometric Rose sparkle Earrings",
+      oldPrice: 2048.00,
+      price: 1328.00,
       image: "IMAGES/ER3.JPG"
     },
     {
       id: 23,
-      name: "Gem Accent Ring",
-      price: 1098.00,
+      name: "Cross Over Pearl Stud Earrings",
+      oldPrice: 1098.00,
+      price: 708.00,
       image: "IMAGES/ER8.JPG"
     },
     {
       id: 24,
-      name: "Gem Accent Ring",
-      price: 1328.00,
+      name: "Laurel Leaf Top Rose Gold Dangle Earrings",
+      oldPrice: 1328.00,
+      price: 858.00,
       image: "IMAGES/ER9.JPG"
     }
   ];
+
   const container = document.getElementById("product-list");
   const viewMoreBtn = document.getElementById("view-more-btn");
   let visibleCount = 8;
 
+  function calculateDiscountPercentage(oldPrice, newPrice) {
+    // Calculate discount percentage and round to nearest whole number
+    return Math.round(((oldPrice - newPrice) / oldPrice) * 100);
+  }
+
   function renderProducts(limit) {
     container.innerHTML = "";
     productData.slice(0, limit).forEach(product => {
+      // Calculate discount percentage for this product
+      const discountPercent = calculateDiscountPercentage(product.oldPrice, product.price);
+      // Calculate actual discount amount
+      const discountAmount = product.oldPrice - product.price;
+      
       const card = document.createElement("div");
       card.classList.add("pro");
       card.innerHTML = `
@@ -1352,13 +1504,27 @@ footer {
             <i class="far fa-heart"></i>
         </div>
 
+        <!-- Discount badge showing dynamic percentage -->
+        ${discountPercent > 0 ? `
+          <div class="discount-badge">
+            <span class="discount-percent">${discountPercent}% OFF</span>
+            <span class="discount-amount">Save ₹${discountAmount.toFixed(2)}</span>
+          </div>
+        ` : ''}
+
         <a href="product.html?id=${product.id}">
           <img src="${product.image}" alt="${product.name}">
         </a>
 
         <div class="des">
           <span>${product.name}</span>
-          <h4>₹${product.price.toFixed(2)}</h4>
+          <div class="price-container">
+            <h4 class="new-price">₹${product.price.toFixed(2)}</h4>
+            <div class="old-price-container">
+              <span class="dash">-</span>
+              <span class="old-price">₹${product.oldPrice.toFixed(2)}</span>
+            </div>
+          </div>
           <button class="add-to-cart" 
                   data-id="${product.id}" 
                   data-name="${product.name}" 
@@ -1385,7 +1551,7 @@ footer {
   viewMoreBtn.addEventListener("click", () => {
     visibleCount += 8;
     renderProducts(visibleCount);
-  });
+  });
 </script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {

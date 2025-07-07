@@ -486,6 +486,56 @@
   }
 }
 
+.back-button {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgb(252, 250, 250);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.back-button:hover {
+  background-color: #000000;
+  transform: translateX(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+}
+
+.back-button:active {
+  transform: translateX(-2px) scale(0.96);
+}
+
+.back-button svg {
+  transition: transform 0.2s ease;
+}
+
+.back-button:hover svg {
+  transform: translateX(-2px);
+}
+
+/* For dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  .back-button {
+    background-color: #fffdfd;
+    color: #000000;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .back-button:hover {
+    background-color: #3a3a3a;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -495,7 +545,18 @@
   <!-- Product Container -->
   <div class="container">
    <!-- Header Icons Section -->
+
+  <!-- Header Section with separate back button -->
+  <div class="product-header">
+ <!-- Back Button (replace the existing one) -->
+<a href="javascript:history.back()" class="back-button">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</a>
+  </div>
 <div class="header-icons">
+  
   <a href="wishlist.html" class="icon-link wishlist-icon">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
@@ -843,7 +904,7 @@
   
       "17": {
         id: "17",
-        title: "Elegant Earrings",
+        title: "Silver Tone Green Crystal Dangle Earrings",
         price: 828.00,
         oldPrice: 1278.00,
         image: "IMAGES/ER6.JPG",
@@ -864,9 +925,9 @@
       },
       "18": {
         id: "18",
-        title: "Elegant Earrings",
-        price: 1028.00,
-        oldPrice: 1588.00,
+        title: "Timeless Peal & Crystal Everyday Studs Earrings",
+        price: 788.00,
+        oldPrice: 1218.00,
         image: "IMAGES/ER7.JPG",
         subImages: [
           "IMAGES/ER7.JPG",
@@ -885,7 +946,7 @@
       },
       "19": {
         id: "19",
-        title: "Elegant Earrings",
+        title: "Halo Circle Stud Earrings",
         price: 1028.00,
         oldPrice: 1588.00,
         image: "IMAGES/ER2.JPG",
@@ -906,7 +967,7 @@
       },
       "20": {
         id: "20",
-        title: "Elegant Earrings",
+        title: "Leaf Above the Circle Design Earrings",
         price:1708.00,
         oldPrice: 2638.00,
         image: "IMAGES/ER4.JPG",
@@ -928,7 +989,7 @@
 
        "21": {
         id: "21",
-        title: "Elegant Earrings",
+        title: "Revolving Jhumka Hoop Earrings ",
         price: 1508.00,
         oldPrice: 2328.00,
         image: "IMAGES/ER1.JPG",
@@ -950,7 +1011,7 @@
 
           "22": {
         id: "22",
-        title: "Elegant Earrings",
+        title: "Glamour Geometric Rose sparkle Earrings",
         price: 1328.00,
         oldPrice: 2048.00,
         image: "IMAGES/ER3.JPG",
@@ -974,7 +1035,7 @@
       
           "23": {
         id: "23",
-        title: "Elegant Earrings",
+        title: "Cross Over Pearl Stud Earrings",
         price: 708.00,
         oldPrice: 1098.00,
         image: "IMAGES/ER8.JPG",
@@ -998,7 +1059,7 @@
 
          "24": {
         id: "24",
-        title: "Elegant Earrings",
+        title: "Laurel Leaf Top Rose Gold Dangle Earrings",
         price: 858.00,
         oldPrice: 1328.00,
         image: "IMAGES/ER9.JPG",
@@ -1021,7 +1082,7 @@
 
   "25": {
         id: "25",
-        title: "Elegant Chain",
+        title: "Manik Panna Kundan & Pearl Chakor With Earings",
         price: 1718.00,
         oldPrice: 2868.00,
         image: "IMAGES/NC10.png",
@@ -1045,7 +1106,7 @@
 
        "26": {
         id: "26",
-        title: "Elegant Chain",
+        title: "Buterfly Floral Wine Designe Chakor Set With Earings",
         price: 2218.00,
         oldPrice: 2798.00,
         image: "IMAGES/NC2.JPG",
@@ -1068,7 +1129,7 @@
 
  "27": {
         id: "27",
-        title: "Elegant Chain",
+        title: "Floral Cluster American Dimaond Chakor With Earing",
         price: 1948.00,
         oldPrice: 3258.00,
         image: "IMAGES/NC3.JPG",
@@ -1090,7 +1151,7 @@
       },
        "28": {
         id: "28",
-        title: "Elegant Chain",
+        title: "Gold Toned Pearl & Crystal Collar Chakor With Earings",
         price: 2118.00,
         oldPrice: 3538.00,
         image: "IMAGES/NC4.JPG",
@@ -1112,7 +1173,7 @@
       },
        "29": {
         id: "29",
-        title: "Elegant Chain",
+        title: "Peshwai Rawa Pendant Chakor With Earings",
         price: 1678.00,
         oldPrice: 2798.00,
         image: "IMAGES/NC5.png",
@@ -1134,7 +1195,7 @@
       },
        "30": {
         id: "30",
-        title: "Elegant Chain",
+        title: "Chandraki Kairi Chakor With Earings",
         price: 1718.00,
         oldPrice: 2868.00,
         image: "IMAGES/NC7.png",
@@ -1156,7 +1217,7 @@
       },
        "31": {
         id: "31",
-        title: "Elegant Chain",
+        title: "Diamond Mesh Designe Chakor With Earings",
         price: 2158.00,
         oldPrice: 3608.00,
         image: "IMAGES/NC9.png",
@@ -1270,7 +1331,7 @@
 
         "38": {
         id: "38",
-        title: "Adorning Your Wrist",
+        title: "Rose Bloom 18kt Gold Bracelet kada",
         price:818.00,
         oldPrice:1368.00,
         image: "IMAGES/BR1.jpg",
@@ -1292,7 +1353,7 @@
 
           "39": {
         id: "39",
-        title: "Adorning Your Wrist",
+        title: "Tri-Colours breaded Bangle With Free Ring",
         price:628.00,
         oldPrice: 1048.00,
         image: "IMAGES/BR2.JPG",
@@ -1316,7 +1377,7 @@
 
           "40": {
         id: "40",
-        title: "Adorning Your Wrist",
+        title: "Floral Blossom Chain Bracelet",
        price:1048.00,
         oldPrice: 1748.00,
         image: "IMAGES/BR3.jpg",
@@ -1338,7 +1399,7 @@
 
           "41": {
         id: "41",
-        title: "Adorning Your Wrist",
+        title: "Blush Blom 18kt Bracelet Kada",
         price: 738.00,
         oldPrice: 1228.00,
         image: "IMAGES/BR4.jpg",
@@ -1360,7 +1421,7 @@
 
           "42": {
         id: "42",
-        title: "Adorning Your Wrist",
+        title: "Infinity Knots Chain Bracelet",
          price: 1218.00,
         oldPrice: 2028.00,
         image: "IMAGES/BR5.jpg",
@@ -1382,7 +1443,7 @@
 
           "43": {
         id: "43",
-        title: "Adorning Your Wrist",
+        title: "Butterfly Lucky Charm Mini Stones Bracelets",
         price: 1108.00,
         oldPrice:1858.00,
         image: "IMAGES/BR6.jpg",
@@ -1404,9 +1465,9 @@
 
           "44": {
         id: "44",
-        title: "Adorning Your Wrist",
-        price:918.00,
-        oldPrice: 1538.00,
+        title: "The Lions Lock Pearl Bracelets",
+        price:998.00,
+        oldPrice: 1658.00,
         image: "IMAGES/BR7.jpg",
         subImages: [
           "IMAGES/BR7.jpg",
@@ -2467,9 +2528,9 @@
 
       "103": {
         id: "103",
-        title: "Adorning Your Wrist",
-        price: 4800.00,
-        oldPrice: 7800.00,
+        title: "Pearl And Gold Cyclinder Chain Mangalsutra ",
+        price: 838.00,
+        oldPrice: 1298.00,
         image: "IMAGES/shop1616.webp",
         subImages: [
           "IMAGES/shop1616.webp",
@@ -2491,9 +2552,9 @@
 
       "104": {
         id: "104",
-        title: "Adorning Your Wrist",
-        price: 4800.00,
-        oldPrice: 7800.00,
+        title: "Two Tone Gemstone Chain Managlsutra With Earings",
+        price: 1428.00,
+        oldPrice: 2208.00,
         image: "IMAGES/shop1818.jpeg",
         subImages: [
           "IMAGES/shop1818.jpeg",
@@ -2515,9 +2576,9 @@
 
       "105": {
         id: "105",
-        title: "Adorning Your Wrist",
-        price: 4800.00,
-        oldPrice: 7800.00,
+        title: "Gold Leaf And Red Stones chain Managlsutra With Earings",
+        price: 1448.00,
+        oldPrice: 2238.00,
         image: "IMAGES/shop222.jpg",
         subImages: [
           "IMAGES/shop222.jpg",
@@ -2610,7 +2671,7 @@
 
       "109": {
         id: "109",
-        title: "Silver Chains",
+        title: "Roman Circle Chronos Pendant With Earrings Set",
         price: 1148.00,
         oldPrice: 1538.00,
         image: "IMAGES/Ch1.JPG",
@@ -2633,9 +2694,9 @@
 
          "110": {
         id: "110",
-        title: "Silver Chains",
-      price: 1148.00,
-        oldPrice: 1538.00,
+        title: "Sqare Cubic Diamond Pendant With Earnings Set",
+      price: 1468.00,
+        oldPrice: 1958.00,
         image: "IMAGES/CH2.JPG",
         subImages: [
           "IMAGES/CH2.JPG",
@@ -2656,8 +2717,8 @@
 
           "111": {
         id: "111",
-        title: "Silver Chains",
-       price: 1148.00,
+            title: "The Cubic Charm Pendant With Earring Set",
+      price: 1148.00,
         oldPrice: 1538.00,
         image: "IMAGES/CH3.JPG",
         subImages: [
@@ -2680,7 +2741,7 @@
 
    "112": {
         id: "112",
-        title: "Silver Chains",
+        title: "Sunbrust Chain",
         price: 968.00,
         oldPrice:1298.00,
         image: "IMAGES/CH4.jpg",
@@ -2704,7 +2765,7 @@
 
          "113": {
         id: "113",
-        title: "Silver Chains",
+        title: "Petal Rotating Bloom Pendant with chain",
         price: 1048.00,
         oldPrice: 1398.00,
         image: "IMAGES/CH5.jpg",
@@ -2728,7 +2789,7 @@
 
          "114": {
         id: "114",
-        title: "Silver Chains",
+        title: "Secure Sparkal Pendant with chain",
      price: 1048.00,
         oldPrice: 1398.00,
         image: "IMAGES/CH6.png",
@@ -2752,7 +2813,7 @@
 
          "115": {
         id: "115",
-        title: "Silver Chains",
+        title: "Soul Sparkle Pendant With Earings Set",
         price:1378.00,
         oldPrice: 1838.00,
         image: "IMAGES/CH7.png",
@@ -2776,9 +2837,9 @@
 
          "116": {
         id: "116",
-        title: "Silver Chains",
-        price: 1148.00,
-        oldPrice: 1538.00,
+        title: "Roman Circle Chronos Pendant With Earrings Set",
+        price: 968.00,
+        oldPrice: 1298.00,
         image: "IMAGES/CH8.jpg",
         subImages: [
           "IMAGES/CH8.jpg",
@@ -2800,7 +2861,7 @@
 
          "117": {
         id: "117",
-        title: "Silver Chains",
+        title: "Snowflake Cubic Pendant With Earrings Set",
         price:1358.00,
         oldPrice: 1808.00,
         image: "IMAGES/CH9.jpg",
@@ -2825,7 +2886,7 @@
       
           "118": {
         id: "118",
-        title: "Silver Chains",
+        title: "Infinite Embrace Pendant With Chain",
         price: 1048.00,
         oldPrice: 1398.00,
         image: "IMAGES/CH16.png",
@@ -2848,7 +2909,7 @@
 
         "119": {
         id: "119",
-        title: "Silver Chains",
+        title: "Frosty Leaf Pendant with Chain",
         price: 968.00,
         oldPrice: 1298.00,
         image: "IMAGES/CH13.jpg",
@@ -2872,7 +2933,7 @@
 
         "120": {
         id: "120",
-        title: "Silver Chains",
+        title: "Lucky Charm Bloom Pendant with Chain",
         price: 1048.00,
         oldPrice: 1398.00,
         image: "IMAGES/CH14.jpg",
@@ -2895,9 +2956,9 @@
 
         "121": {
         id: "121",
-        title: "Silver Chains",
-        price: 1838.00,
-        oldPrice: 2498.00,
+        title: "Sparkling Sunflower Pendant with Chain ",
+        price: 968.00,
+        oldPrice: 1298.00,
         image: "IMAGES/CH12.jpg",
         subImages: [
           "IMAGES/CH12.jpg",
