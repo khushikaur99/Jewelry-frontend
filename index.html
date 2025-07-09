@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,148 +21,94 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  <!-- Add this to your homepage HTML -->
-<div id="offerPopup" class="popup-overlay">
-  <div class="popup-content">
-    <button class="close-btn" onclick="closePopup()">×</button>
-    <div class="popup-left">
-      <img src="IMAGES/popup.jpg" alt="Jewelry"/>
+
+  <!-- HEADER -->
+  <header id="header">
+    <!-- TOP BAR -->
+    <div class="header-top-bar">
+      <div class="scrolling-text">
+        <span>✨ Welcome to OY JEWELLS - Free Shipping on Orders Over ₹500 ✨</span>
+        <span>🔔 New Collection Just Launched - Shop Now!</span>
+        <span>🎁 Birthday Special - Get Exciting Offers on Your Birthday Month</span>
+        <span>💝 Anniversary Offer - Extra Off for Couples</span>
+      </div>
     </div>
-    <div class="popup-right">
-      <p class="intro">ON YOUR FIRST PURCHASE</p>
-      <h2>Get Upto 10% Off And Grab Our Offers</h2>
- <button class="signup-btn" onclick="window.location.href='login.html'">Sign Up</button><br><br>
-<hr/>
- <div class="social-icons">
-  <span>Social Media :</span>
- <a href="https://www.facebook.com/profile.php?id=61578134903237" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-<a href="https://www.instagram.com/oy_jewells/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-<a href="https://wa.me/918482859816" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-<a href="https://pinterest.com/oy_jewells" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest"></i></a>
 
+    <!-- MAIN NAVIGATION -->
+    <nav class="navigation">
+      <a href="#" class="logo">
+        <img src="IMAGES/01.png" alt="OY JEWELLS Logo" />
+      </a>
 
-</div>
-</div>
-</div>
-</div>
-<!-- HEADER -->
-<header id="header">
-  <!-- TOP BAR -->
-  <div class="header-top-bar">
-    <span>Welcome To OY JEWELLS Store</span>
-  </div>
-<!-- MAIN NAVIGATION -->
-  <nav class="navigation">
-    <a href="#" class="logo">
-      <img src="IMAGES/01.png" alt="Logo" />
-    </a>
-<!-- NAVBAR LINKS -->
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#">Collection</a>
-        <ul class="dropdown-menu">
-          <li><a href="earring.html?filter=earrings">Earrings</a></li>
-          <li><a href="neck.html?filter=necklaces">Necklaces</a></li>
-          <li><a href="rings.html?filter=rings">Rings</a></li>
-          <li><a href="chain.html?filter=chain">Chains</a></li>
-          <li><a href="bracelet.html?filter=bracelets">Bracelets</a></li>
-          <li><a href="mangalsutra.html?filter=mangalsutra">Mangalsutra</a></li>
-          <li><a href="hair.html?filter=hair">Hair Accessories</a></li>
-        </ul>
-      </li>
-<li class="dropdown">
-        <a href="#">Shop By</a>
-        <ul class="dropdown-menu">
-          <li><a href="wedding.html?occasion=wedding">Wedding</a></li>
-          <li><a href="office.html">Office</a></li>
-          <li><a href="casual.html">Casual</a></li>
-        </ul>
-      </li>
+      <!-- NAVBAR LINKS -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Collection</a>
+          <ul class="dropdown-menu">
+            <li><a href="earring.html?filter=earrings">Earrings</a></li>
+            <li><a href="neck.html?filter=necklaces">Necklaces</a></li>
+            <li><a href="rings.html?filter=rings">Rings</a></li>
+            <li><a href="chain.html?filter=chain">Chains</a></li>
+            <li><a href="bracelet.html?filter=bracelets">Bracelets</a></li>
+            <li><a href="mangalsutra.html?filter=mangalsutra">Mangalsutra</a></li>
+            <li><a href="hair.html?filter=hair">Hair Accessories</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">Track Order</a></li>
+        <li><a href="#">Return & Exchange</a></li>
+        <li><a href="order.html">My Orders</a></li>
+      </ul>
 
-<li><a href="contact.html">Contact Us</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <!-- My Orders added at the end -->
-  <li><a href="order.html">My Orders</a></li>
-    </ul>
- <!-- RIGHT ICONS -->
-<div class="right-nav">
-    <!-- Wishlist -->
-    <a href="wishlist.html" class="wishlist-link">
-        <div class="wishlist-badge">
-            <i class="fa-solid fa-heart" style="color: #000000;"></i>
+      <!-- RIGHT ICONS -->
+      <div class="right-nav">
+        <!-- Wishlist -->
+        <a href="wishlist.html" class="wishlist-link">
+          <div class="wishlist-badge">
+            <i class="fa-solid fa-heart"></i>
             <span class="wishlist-count">0</span>
+          </div>
+        </a>
+        
+        <!-- User Account -->
+        <div class="user-dropdown">
+          <a href="#" class="user-icon"><i class="fa fa-user"></i></a>
+          <div class="dropdown-content">
+            <a href="profile.html">My Profile</a>
+            <a href="login.html">Login</a>
+          </div>
         </div>
-    </a>
- <div class="user-dropdown">
-  <a href="#" class="user-icon"><i class="fa fa-user"></i></a>
-  <div class="dropdown-content">
-    <a href="profile.html">My Profile</a>
-    <a href="login.html">Login</a>
-    <!-- Alternatively for logout when user is logged in:
-    <a href="profile.html">My Profile</a>
-    <a href="logout.html">Logout</a>
-    -->
-  </div>
-</div>
-    <!-- Cart -->
-    <a href="cart.html">
-        <i class="fa fa-shopping-cart"></i>
-        <span id="cart-count">0</span>
-    </a>
-</div>
-  <div class="hamburger" id="hamburger">
-  <i class="fa fa-bars"></i>
-</div>
+        
+        <!-- Cart -->
+        <a href="cart.html">
+          <i class="fa fa-shopping-cart"></i>
+          <span id="cart-count">0</span>
+        </a>
+      </div>
+      
+      <!-- Hamburger Menu -->
+      <div class="hamburger" id="hamburger">
+        <i class="fa fa-bars"></i>
+      </div>
+    </nav>
+
+    <!-- SEARCH BAR -->
+    <div class="search-div">
+      <div class="search-bar">
+        <input type="text" placeholder="" id="searchInput">
+        <button type="submit"><i class="fas fa-search"></i></button>
+        <div class="search-suggestions" id="searchSuggestions"></div>
+      </div>
     </div>
-</nav>
-<div class="search-bar" >
-  <input type="text" placeholder="Search For Jewellery..." id="searchInput">
-  <div class="search-suggestions" id="searchSuggestions"></div>
-</div>
-</header>
-<script>
-  function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('active');
-  }
-</script>
+  </header>
 
-
-<script>
-  function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('active');
-  }
-
-  // Close menu when clicking a sub-dropdown item (any screen size)
-  document.querySelectorAll('.dropdown-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.remove('active');
-    });
-  });
-
-  // Close menu when scrolling
-  window.addEventListener('scroll', () => {
-    if (window.innerWidth <= 768) { // Only close on mobile
-      document.querySelector('.nav-links').classList.remove('active');
-    }
-  });
-
-  // Close menu when clicking outside (mobile only)
-  document.addEventListener('click', (event) => {
-    const navLinks = document.querySelector('.nav-links');
-    const hamburger = document.getElementById('hamburger');
-    
-    if (navLinks.classList.contains('active') && 
-        !event.target.closest('.nav-links') && 
-        !event.target.closest('#hamburger')) {
-      navLinks.classList.remove('active');
-    }
-  });
-</script>
-
- <!-- Floating WhatsApp and Phone Icons -->
+ 
+<!-- Floating WhatsApp and Phone Icons -->
   <div class="floating-icons">
     <!-- WhatsApp Icon -->
     <a href="https://wa.me/918482859816" target="_blank" title="Chat on WhatsApp">
@@ -173,104 +120,141 @@
       <i class="fas fa-phone"></i>
     </a>
   </div>
-<!-- JavaScript to toggle menu -->
-<script>
-  document.getElementById("hamburger").addEventListener("click", function () {
+
+
+
+<!-- Sections -->
+<section id="section1">
+  <!-- MAIN BANNER -->
+  <section id="main-banner">
+    <div class="main-banner-box">
+      <div class="slideshow-container">
+        <!-- Slide 1 -->
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="IMAGES/MAIN.png" style="width:100%">
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="IMAGES/MAIN 1.jpg" style="width:100%">
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="IMAGES/MAIN BANNER 3.jpg" style="width:100%">
     
-  });
-</script>
+        </div>
+        
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+    </div>
+  </section>
+</section>
+
+
 
 <script>
-  document.getElementById("hamburger").addEventListener("click", function () {
-    document.querySelector(".nav-links").classList.toggle("active");
-  });
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block"; 
+    dots[slideIndex-1].className += " active";
+  }
+  
+  // Auto slide change every 5 seconds
+  setInterval(function() {
+    plusSlides(1);
+  }, 3000);
 </script>
-<!-- Hero Section with Video Banner 
-<section class="hero-video-section">
-    <div class="video-container">
-      Video element with fallback image 
-        <video autoplay muted loop playsinline poster="">
-            <source src="VIDEOS/ALL _X-Design.mp4" type="video/mp4">
-           
-          
-        </video>
-       Overlay content 
-       <div class="hero-content">
-            <h1 class="hero-title">Timeless Elegance, Crafted to Perfection</h1>
-            <p class="hero-subtitle">Discover our exquisite collection of handcrafted jewellery</p>
-        </div>
-        </div>
-    </div>
-</section>-->
-
-
-<!-- Sections-->
-  <section id="section1" >
-<!--MAIN BANNER-->
-<section id="main-banner">
- <div class="main-banner-box">
-     <div class="slideshow-container">
-
-         <div class="mySlides">
-           <div class="numbertext "></div>
-           <img src="IMAGES/MAIN BR 1.jpg" style="width:100%">
-         </div>
-      
-        </section>
 
 
 
 <section id="collection" class="product-section">
-  <div class="product-card1">
+  <div class="product-card1" onclick="window.location.href='rings.html'">
     <img src="IMAGES/shop 1010.webp" alt="Product 1">
     <h3>Silver Rings</h3>
     <!-- Shop Now Button inside the card -->
     <a href="rings.html" class="shop-btn1" target="_blank">Shop Now</a>
   </div>
 
-  <div class="product-card1">
+  <div class="product-card1" onclick="window.location.href='bracelet.html'">
     <img src="IMAGES/bracelet.jpg" alt="Product 2">
     <h3>Simple Bracelets</h3>
     <!-- Shop Now Button inside the card -->
     <a href="bracelet.html" class="shop-btn1" target="_blank">Shop Now</a>
   </div>
 
-  <div class="product-card1">
+  <div class="product-card1" onclick="window.location.href='neck.html'">
     <img src="IMAGES/neck8.webp" alt="Product 3">
     <h3>Necklaces</h3>
     <!-- Shop Now Button inside the card -->
     <a href="neck.html" class="shop-btn1" target="_blank">Shop Now</a>
   </div>
 
-  <div class="product-card1">
+  <div class="product-card1" onclick="window.location.href='earring.html'">
     <img src="IMAGES/earrings 33.jpg" alt="Product 4">
     <h3>Elegant Earrings</h3>
     <!-- Shop Now Button inside the card -->
     <a href="earring.html" class="shop-btn1" target="_blank">Shop Now</a>
   </div>
 
-   <div class="product-card1">
+   <div class="product-card1" onclick="window.location.href='chain.html'">
     <img src="IMAGES/silver chains.jpg" alt="Product 4">
     <h3>Simple Chains</h3>
     <!-- Shop Now Button inside the card -->
     <a href="chain.html" class="shop-btn1" target="_blank">Shop Now</a>
   </div>
 
-<div class="product-card1">
+<div class="product-card1" onclick="window.location.href='hair.html'">
     <img src="IMAGES/hair ban.jpg" alt="Product 4">
     <h3>Hair Accessories</h3>
     <!-- Shop Now Button inside the card -->
     <a href="hair.html" class="shop-btn1" target="_blank">Shop Now</a>
   </div>
 
-  <div class="product-card1">
+  <div class="product-card1" onclick="window.location.href='mangalsutra.html'">
     <img src="IMAGES/silver mangal.jpg" alt="Product 4">
     <h3>Mangalsutra</h3>
     <!-- Shop Now Button inside the card -->
     <a href="mangalsutra.html" class="shop-btn1" target="_blank">Shop Now</a>
   </div>
 
-    <div class="product-card1">
+    <div class="product-card1" onclick="window.location.href='mangalsutra.html'">
     <img src="IMAGES/gifts.jpg" alt="Product 4">
     <h3>Gift Your Loved Ones</h3>
     <!-- Shop Now Button inside the card -->
@@ -281,50 +265,13 @@
 <!-- One Image Banner Section -->
 <section class="single-banner">
   <div class="banner-wrapper">
-    <img src="IMAGES/main banner 2.jpg" alt="Promotional Banner" />
+    <img src="IMAGES/MAIN 2 BANNER.jpg" alt="Promotional Banner" />
   </div>
 </section>
 
 
-<!--<section class="video-banner">
-  <div class="video-bg">
-    <video autoplay muted loop playsinline>
-      <source src="VIDEOS/HOME_X-Design.mp4" type="video/mp4">
-     
-    </video>
-  </div>
-  <div class="video-text">
-    <h2>STERLING SILVER : A PERFECT ADDITION TO YOUR JEWELLERY COLLECTION</h2>
-  
-  </div>
-</section>-->
 
-<!--<section id="feature" class="section4">
-  <div class="fe-box">
-    <img src="IMAGES/free shipping.webp" alt="">
-    <h6>Free Shipping</h6>
-  </div>
-  <div class="fe-box">
-    <img src="IMAGES/online.jpg" alt="">
-    <h6>Online Delivery</h6>
-  </div>
-  <div class="fe-box">
-    <img src="IMAGES/money.jpg" alt="">
-    <h6>Save Money</h6>
-  </div>
-  <div class="fe-box">
-    <img src="IMAGES/sale2.jpg" alt="">
-    <h6>Exclusive Offers</h6>
-  </div>
-  <div class="fe-box">
-    <img src="IMAGES/support.jpg" alt="">
-    <h6>24/7 Support</h6>
-  </div>
-  <div class="fe-box">
-    <img src="IMAGES/happy.jpg" alt="">
-    <h6>Happy Customers</h6>
-  </div>
-</section>-->
+  
 
 <section class="featured-products">
   <h2>Featured Products</h2>                
@@ -367,27 +314,14 @@
     </div>
   </div>
 </section>
-
-<section id="section5">
+<section id="bottom-banner">
   <div class="big-banner">
-      <div class="overlay">
-          <div class="content">
-              <h1 class="animate-heading">OYJEWELLS</h1>
-              <p class="animate-subheading">
-                  Avail exciting offers on each order <br>
-                  Offers so great, it's worth the wait!!!!!
-              </p><br>
-              <a href="gifts.html" class="shop-now-btn animate-button">Shop Now</a>
-          </div>
-      </div>
-      <div class="banner-image">
-          <img src="IMAGES/beige.jpg"alt="Palmonas Product Image">
-      </div>
-      <div class="overlay-image">
-          <img src="IMAGES/shop1414.webp" alt="Palmonas Product Image">
-      </div>
+    <div class="overlay"></div>
+    <div class="banner-image">
+      <img src="images/MAIN BANNER 3.jpg" alt="Oy Product Image">
+    </div>
   </div>
-  </section>
+</section>
 
 <section id="section7" style="background-image: url(IMAGES/bgq1.jpg); background-size: cover; height: 70%;">
   <div class="sticky-container">  
@@ -501,6 +435,140 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-<script src="script.js"></script>
+  
+  <script>
+    // Mobile Navigation Toggle
+    document.addEventListener("DOMContentLoaded", function() {
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.querySelector(".nav-links");
+      
+      // Toggle mobile menu
+      hamburger.addEventListener("click", function(e) {
+        e.stopPropagation();
+        navLinks.classList.toggle("active");
+        
+        // Toggle hamburger icon
+        const icon = hamburger.querySelector("i");
+        if (navLinks.classList.contains("active")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      });
+
+      // Handle dropdown clicks on mobile
+      const dropdowns = document.querySelectorAll('.dropdown > a');
+      
+      dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', function(e) {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            const parent = this.parentElement;
+            parent.classList.toggle('active');
+            
+            // Close other dropdowns
+            document.querySelectorAll('.dropdown').forEach(otherDropdown => {
+              if (otherDropdown !== parent && otherDropdown.classList.contains('active')) {
+                otherDropdown.classList.remove('active');
+              }
+            });
+          }
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.navigation') && window.innerWidth <= 768) {
+          navLinks.classList.remove('active');
+          document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.classList.remove('active');
+          });
+          // Reset hamburger icon
+          const icon = hamburger.querySelector("i");
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      });
+
+      // Close menu on scroll
+      window.addEventListener('scroll', function() {
+        if (window.innerWidth <= 768) {
+          navLinks.classList.remove('active');
+          document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.classList.remove('active');
+          });
+          // Reset hamburger icon
+          const icon = hamburger.querySelector("i");
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      });
+      
+      // Close menu on touch (for mobile)
+      document.addEventListener('touchstart', function(event) {
+        if (!event.target.closest('.navigation') && window.innerWidth <= 768) {
+          navLinks.classList.remove('active');
+          document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.classList.remove('active');
+          });
+          // Reset hamburger icon
+          const icon = hamburger.querySelector("i");
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      });
+
+      // Animated Search Placeholder
+      const jewelryTerms = [
+        "Earrings",
+        "Necklaces",
+        "Bracelets",
+        "Mangalsutra",
+        "Chains",
+      ];
+
+      const searchInput = document.getElementById('searchInput');
+      let currentTermIndex = 0;
+      let isDeleting = false;
+      let currentText = '';
+      let typingSpeed = 100; // milliseconds per character
+
+      function typePlaceholder() {
+        const fullTerm = `Search for ${jewelryTerms[currentTermIndex]}...`;
+        
+        if (isDeleting) {
+          // Delete character
+          currentText = fullTerm.substring(0, currentText.length - 1);
+        } else {
+          // Add character
+          currentText = fullTerm.substring(0, currentText.length + 1);
+        }
+
+        searchInput.placeholder = currentText;
+
+        // Determine if we should delete or type next
+        if (!isDeleting && currentText === fullTerm) {
+          // Pause at end of typing
+          setTimeout(() => isDeleting = true, 1000);
+        } else if (isDeleting && currentText === '') {
+          // Move to next term after deleting
+          isDeleting = false;
+          currentTermIndex = (currentTermIndex + 1) % jewelryTerms.length;
+          setTimeout(typePlaceholder, 500);
+          return;
+        }
+
+        // Adjust speed for deleting vs typing
+        const speed = isDeleting ? typingSpeed / 2 : typingSpeed;
+        setTimeout(typePlaceholder, speed);
+      }
+
+      // Start the typing effect
+      typePlaceholder();
+    });
+  </script>
+
 </body>
 </html>

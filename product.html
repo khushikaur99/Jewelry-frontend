@@ -259,41 +259,45 @@
     }
 
     .add-to-cart {
-      background: #000000;
+  background: linear-gradient(135deg, #511D43, #A91E4A);
     }
 
-    .add-to-cart:hover {
-      background: #ff6b6b;
-    }
-
+  
     .buy-now {
-      background: #000000;
+  background: linear-gradient(135deg, #511D43, #A91E4A);
     }
 
-    .buy-now:hover {
-      background: #ff6b6b;
-    }
+ 
 
     .wishlist-btn {
- 
-  background-color:#000000;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
+  background: linear-gradient(135deg, #511D43, #A91E4A);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
 
-.wishlist-btn:hover {
-  background-color: #ff6b6b; /* Pink shade */
-}
+   
 
-.wishlist-btn svg {
-  stroke: currentColor;
-  transition: stroke 0.3s ease;
-}
+    .wishlist-btn svg {
+      stroke: currentColor;
+      transition: stroke 0.3s ease;
+    }
+
+    .share-btn {
+  background: linear-gradient(135deg, #511D43, #A91E4A);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
 
 
     /* Responsive */
@@ -327,252 +331,356 @@
       to { transform: rotate(360deg); }
     }
 
- .header-icons {
-    position: fixed;
-    top: 60px;
-    right: 90px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    z-index: 1000;
-    background: rgba(255,255,255,0.9);
-    padding: 10px 15px;
-    border-radius: 25px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  }
-  
-  .icon-link {
-    position: relative;
-    display: flex;
-    color: #333;
-    text-decoration: none;
-    padding: 5px;
-  }
-  
-  .icon-link svg {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .badge {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background: #ff3b30;
-    color: white;
-    border-radius: 50%;
-    width: 16px;
-    height: 16px;
-    font-size: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-  }
-  
-/* Mobile Responsive Styles (max-width: 600px) */
-@media (max-width: 600px) {
-  body {
-    padding: 10px;
-  }
-  
-  .container {
-    padding: 15px;
-    margin: 0;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .header-icons {
-    top: 15px;
-    right: 15px;
-    padding: 8px 12px;
-    gap: 15px;
-  }
-  
-  .product-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .price {
-    font-size: 1.4em;
-  }
-  
-  .old-price {
-    font-size: 1em;
-  }
-  
-  .discount-badge {
-    font-size: 0.8em;
-  }
-  
-  .rating {
-    margin-bottom: 10px;
-  }
-  
-  .size-buttons {
-    justify-content: center;
-  }
-  
-  .size-btn {
-    min-width: 35px;
-    height: 35px;
-    font-size: 0.9em;
-  }
-  
-  .action-buttons {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  .action-buttons button {
-    width: 100%;
-    padding: 12px;
-    font-size: 1em;
-  }
-  
-  .wishlist-btn {
-    width: 100%;
-    padding: 12px;
-    justify-content: center;
-  }
-  
-  .sub-images img {
-    width: calc(33.33% - 7px); /* 3 images per row on small screens */
-  }
-  
-  .description {
-    font-size: 0.95em;
-  }
-  
-  .features {
-    padding-left: 15px;
-  }
-  
-  .features li {
-    font-size: 0.9em;
-    margin-bottom: 6px;
-  }
-}
+    .header-icons {
+      position: fixed;
+      top: 60px;
+      right: 90px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      z-index: 1000;
+      background: rgba(255,255,255,0.9);
+      padding: 10px 15px;
+      border-radius: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .icon-link {
+      position: relative;
+      display: flex;
+      color: #333;
+      text-decoration: none;
+      padding: 5px;
+    }
+    
+    .icon-link svg {
+      width: 20px;
+      height: 20px;
+    }
+    
+    .badge {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: #ff3b30;
+      color: white;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    /* Mobile Responsive Styles (max-width: 600px) */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      
+      .container {
+        padding: 15px;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      
+      .header-icons {
+        top: 15px;
+        right: 15px;
+        padding: 8px 12px;
+        gap: 15px;
+      }
+      
+      .product-title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+      
+      .price {
+        font-size: 1.4em;
+      }
+      
+      .old-price {
+        font-size: 1em;
+      }
+      
+      .discount-badge {
+        font-size: 0.8em;
+      }
+      
+      .rating {
+        margin-bottom: 10px;
+      }
+      
+      .size-buttons {
+        justify-content: center;
+      }
+      
+      .size-btn {
+        min-width: 35px;
+        height: 35px;
+        font-size: 0.9em;
+      }
+      
+      .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      
+      .action-buttons button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1em;
+      }
+      
+      .wishlist-btn {
+        width: 100%;
+        padding: 12px;
+        justify-content: center;
+      }
+      
+      .sub-images img {
+        width: calc(33.33% - 7px);
+      }
+      
+      .description {
+        font-size: 0.95em;
+      }
+      
+      .features {
+        padding-left: 15px;
+      }
+      
+      .features li {
+        font-size: 0.9em;
+        margin-bottom: 6px;
+      }
+    }
 
-/* Very small devices (max-width: 400px) */
-@media (max-width: 400px) {
-  .header-icons {
-    top: 10px;
-    right: 10px;
-    gap: 10px;
-    padding: 6px 10px;
-  }
-  
-  .icon-link svg {
-    width: 18px;
-    height: 18px;
-  }
-  
-  .badge {
-    width: 14px;
-    height: 14px;
-    font-size: 9px;
-  }
-  
-  .product-title {
-    font-size: 1.3em;
-  }
-  
-  .sub-images img {
-    width: calc(50% - 5px); /* 2 images per row on very small screens */
-  }
-}
+    /* Very small devices (max-width: 400px) */
+    @media (max-width: 400px) {
+      .header-icons {
+        top: 10px;
+        right: 10px;
+        gap: 10px;
+        padding: 6px 10px;
+      }
+      
+      .icon-link svg {
+        width: 18px;
+        height: 18px;
+      }
+      
+      .badge {
+        width: 14px;
+        height: 14px;
+        font-size: 9px;
+      }
+      
+      .product-title {
+        font-size: 1.3em;
+      }
+      
+      .sub-images img {
+        width: calc(50% - 5px);
+      }
+    }
 
-.back-button {
-  position: absolute;
-  left: 10px;
-  top: 20px;
-  z-index: 10;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: rgb(252, 250, 250);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  color: #000000;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-}
+    .back-button {
+      position: absolute;
+      left: 10px;
+      top: 20px;
+      z-index: 10;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: rgb(252, 250, 250);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      color: #000000;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
 
-.back-button:hover {
-  background-color: #000000;
-  transform: translateX(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  color: #ffffff;
-}
+    .back-button:hover {
+      background-color: #000000;
+      transform: translateX(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      color: #ffffff;
+    }
 
-.back-button:active {
-  transform: translateX(-2px) scale(0.96);
-}
+    .back-button:active {
+      transform: translateX(-2px) scale(0.96);
+    }
 
-.back-button svg {
-  transition: transform 0.2s ease;
-}
+    .back-button svg {
+      transition: transform 0.2s ease;
+    }
 
-.back-button:hover svg {
-  transform: translateX(-2px);
-}
+    .back-button:hover svg {
+      transform: translateX(-2px);
+    }
 
-/* For dark mode support (optional) */
-@media (prefers-color-scheme: dark) {
-  .back-button {
-    background-color: #fffdfd;
-    color: #000000;
-    border-color: rgba(255, 255, 255, 0.1);
-  }
-  .back-button:hover {
-    background-color: #3a3a3a;
-  }
-}
+    /* For dark mode support (optional) */
+    @media (prefers-color-scheme: dark) {
+      .back-button {
+        background-color: #fffdfd;
+        color: #000000;
+        border-color: rgba(255, 255, 255, 0.1);
+      }
+      .back-button:hover {
+        background-color: #3a3a3a;
+      }
+    }
 
+    /* Share modal styles */
+    .share-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .share-modal-content {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    .share-modal-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #777;
+    }
+
+    .share-modal-close:hover {
+      color: #333;
+    }
+
+    .share-modal-title {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.4em;
+      color: #333;
+    }
+
+    .share-options {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .share-option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 8px;
+      transition: background-color 0.2s;
+    }
+
+    .share-option:hover {
+      background-color: #f5f5f5;
+    }
+
+    .share-icon {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .share-label {
+      font-size: 0.9em;
+    }
+
+    .share-link-container {
+      display: flex;
+      margin-top: 15px;
+    }
+
+    .share-link {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px 0 0 4px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .copy-link-btn {
+      padding: 10px 15px;
+      background-color: #000000;
+      color: white;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .copy-link-btn:hover {
+      background-color: #ff6b6b;
+    }
+
+    .copy-success {
+      color: #28a745;
+      font-size: 0.9em;
+      margin-top: 10px;
+      display: none;
+    }
   </style>
 </head>
 <body>
 
- 
-
   <!-- Product Container -->
   <div class="container">
-   <!-- Header Icons Section -->
-
-  <!-- Header Section with separate back button -->
-  <div class="product-header">
- <!-- Back Button (replace the existing one) -->
-<a href="javascript:history.back()" class="back-button">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</a>
-  </div>
-<div class="header-icons">
-  
-  <a href="wishlist.html" class="icon-link wishlist-icon">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-    </svg>
-    <span class="badge wishlist-badge">0</span>
-  </a>
-  <a href="cart.html" class="icon-link cart-icon">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <circle cx="9" cy="21" r="1"></circle>
-      <circle cx="20" cy="21" r="1"></circle>
-      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-    </svg>
-    <span class="badge cart-badge">0</span>
-  </a>
-
-</div>
+    <!-- Header Section with separate back button -->
+    <div class="product-header">
+      <!-- Back Button (replace the existing one) -->
+      <a href="javascript:history.back()" class="back-button">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+    
+    <div class="header-icons">
+      <a href="wishlist.html" class="icon-link wishlist-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+        <span class="badge wishlist-badge">0</span>
+      </a>
+      <a href="cart.html" class="icon-link cart-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="badge cart-badge">0</span>
+      </a>
+    </div>
+    
     <!-- Left: Image Section -->
     <div class="image-section">
       <img id="product-image" src="" alt="Product Image" class="main-image">
@@ -629,10 +737,44 @@
           </svg>
           Wishlist
         </button>
+        <button class="share-btn" id="share-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+            <polyline points="16 6 12 2 8 6"></polyline>
+            <line x1="12" y1="2" x2="12" y2="15"></line>
+          </svg>
+          Share
+        </button>
       </div>
     </div>
   </div>
-</body>
+
+  <!-- Share Modal -->
+  <div class="share-modal" id="share-modal">
+    <div class="share-modal-content">
+      <span class="share-modal-close" id="share-modal-close">&times;</span>
+      <h3 class="share-modal-title">Share this product</h3>
+      <div class="share-options">
+        <div class="share-option" id="share-facebook">
+          <div class="share-icon"><i class="fab fa-facebook-f"></i></div>
+          <div class="share-label">Facebook</div>
+        </div>
+        <div class="share-option" id="share-twitter">
+          <div class="share-icon"><i class="fab fa-twitter"></i></div>
+          <div class="share-label">Twitter</div>
+        </div>
+        <div class="share-option" id="share-whatsapp">
+          <div class="share-icon"><i class="fab fa-whatsapp"></i></div>
+          <div class="share-label">WhatsApp</div>
+        </div>
+      </div>
+      <div class="share-link-container">
+        <input type="text" class="share-link" id="share-link-input" readonly value="">
+        <button class="copy-link-btn" id="copy-link-btn">Copy</button>
+      </div>
+      <div class="copy-success" id="copy-success">Link copied to clipboard!</div>
+    </div>
+  </div>
 
 <script>
     // Product data
@@ -703,6 +845,8 @@
         sizes: ["4", "5", "6", "7", "8"],
         unavailableSizes: []
       },
+   
+
       "4": {
         id: "4",
         title: "Elegant Band",
@@ -1099,8 +1243,7 @@
           "Comfort-fit design",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+      
       },
 
 
@@ -1123,8 +1266,7 @@
           "Comfort-fit design",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+      
       },
 
  "27": {
@@ -1146,8 +1288,7 @@
           "Comfort-fit design",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+      
       },
        "28": {
         id: "28",
@@ -1168,8 +1309,7 @@
           "Comfort-fit design",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+      
       },
        "29": {
         id: "29",
@@ -1190,8 +1330,7 @@
           "Comfort-fit design",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+      
       },
        "30": {
         id: "30",
@@ -1212,8 +1351,7 @@
           "Comfort-fit design",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+      
       },
        "31": {
         id: "31",
@@ -1234,8 +1372,7 @@
           "Comfort-fit design",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+      
       },
        "32": {
         id: "32",
@@ -1256,8 +1393,7 @@
           "Comfort-fit design",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+      
       },
 
    
@@ -1280,8 +1416,7 @@
           "Comfort-fit design",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+      
       },
        "36": {
         id: "36",
@@ -1302,8 +1437,7 @@
           "Comfort-fit design",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+      
       },
              "36": {
         id: "36",
@@ -1324,8 +1458,7 @@
           "Comfort-fit design",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+      
       },
       
 
@@ -2688,8 +2821,7 @@
           " Handcrafted Designs",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+    
       },
 
          "110": {
@@ -2711,8 +2843,7 @@
           " Handcrafted Designs",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+    
       },
 
           "111": {
@@ -2734,8 +2865,7 @@
           " Handcrafted Designs",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+    
       },
       // ... rest of your product data remains the same ...
 
@@ -2758,8 +2888,7 @@
           " Handcrafted Designs",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+    
       },
       // ... rest of your product data remains the same ...
 
@@ -2782,8 +2911,7 @@
           " Handcrafted Designs",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+    
       },
       // ... rest of your product data remains the same ...
 
@@ -2806,8 +2934,7 @@
           " Handcrafted Designs",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+    
       },
       // ... rest of your product data remains the same ...
 
@@ -2830,8 +2957,7 @@
           " Handcrafted Designs",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+    
       },
       // ... rest of your product data remains the same ...
 
@@ -2854,8 +2980,7 @@
           " Handcrafted Designs",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+    
       },
       // ... rest of your product data remains the same ...
 
@@ -2878,8 +3003,7 @@
           " Handcrafted Designs",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+    
       },
       // ... rest of your product data remains the same ...
 
@@ -2903,8 +3027,7 @@
           " Handcrafted Designs",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+    
       },
 
         "119": {
@@ -2926,8 +3049,7 @@
           " Handcrafted Designs",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+    
       },
 
 
@@ -2950,8 +3072,7 @@
           " Handcrafted Designs",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+    
       },
 
         "121": {
@@ -2973,8 +3094,7 @@
           " Handcrafted Designs",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+    
       },
 
 
@@ -2997,8 +3117,7 @@
           " Handcrafted Designs",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+    
       },
 
          "131": {
@@ -3020,8 +3139,7 @@
           " Handcrafted Designs",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+    
       },
 
          "132": {
@@ -3043,407 +3161,457 @@
           " Handcrafted Designs",
           "Lightweight and gentle on skin"
         ],
-        sizes: ["4", "5", "6", "7", "8"],
-        unavailableSizes: []
+    
       },
       // ... rest of your product data remains the same ...
     };
-    // Current product and selected options
-    let currentProduct = null;
-    let selectedSize = null;
+   // Current product and selected options
+let currentProduct = null;
+let selectedSize = null;
 
-    // Initialize the page
-    document.addEventListener('DOMContentLoaded', function() {
-      initializeProductPage();
+// Initialize the page
+document.addEventListener('DOMContentLoaded', function() {
+  initializeProductPage();
+});
+
+function initializeProductPage() {
+  // Get product ID from URL
+  const productId = getProductIdFromUrl();
+  
+  // Load product data
+  loadProduct(productId);
+  
+  // Set up UI components
+  setupImageZoom();
+  setupEventListeners();
+  initializeShareFunctionality();
+}
+
+function getProductIdFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("id");
+}
+
+// Load product data
+function loadProduct(productId) {
+  // In a real implementation, you would fetch this from an API or database
+  // For now, we'll assume a products object exists
+  const product = products && products[productId];
+  
+  if (!product) {
+    showProductNotFound();
+    return;
+  }
+
+  currentProduct = product;
+  
+  updateProductInfo(product);
+  updateProductImages(product);
+  updateProductDescription(product);
+  updateSizeOptions(product);
+  checkWishlistStatus();
+  updateCartCount();
+  updateWishlistCount();
+}
+
+function showProductNotFound() {
+  document.querySelector(".container").innerHTML = `
+    <div style="padding: 40px; text-align: center;">
+      <h2>Product not found</h2>
+      <p>The requested product could not be found.</p>
+      <a href="index.html" style="color: #007bff;">Return to shop</a>
+    </div>
+  `;
+}
+
+function updateProductInfo(product) {
+  document.getElementById("product-title").textContent = product.title;
+  document.getElementById("product-price").textContent = formatPrice(product.price);
+  
+  const oldPriceElement = document.getElementById("old-price");
+  if (product.oldPrice) {
+    oldPriceElement.textContent = formatPrice(product.oldPrice);
+    
+    const discount = calculateDiscount(product.oldPrice, product.price);
+    const discountBadge = document.getElementById("discount-badge");
+    discountBadge.textContent = `${discount}% OFF`;
+    discountBadge.style.display = "inline-block";
+  } else {
+    oldPriceElement.style.display = "none";
+  }
+}
+
+function formatPrice(price) {
+  return `₹${price.toFixed(2)}`;
+}
+
+function calculateDiscount(oldPrice, currentPrice) {
+  return Math.round(((oldPrice - currentPrice) / oldPrice) * 100);
+}
+
+function updateProductImages(product) {
+  document.getElementById("product-image").src = product.image;
+  document.getElementById("zoomed-image").src = product.image;
+  
+  const subImagesContainer = document.getElementById("sub-images-container");
+  subImagesContainer.innerHTML = "";
+  
+  product.subImages.forEach((imgSrc, index) => {
+    const img = document.createElement("img");
+    img.src = imgSrc;
+    img.alt = `${product.title} - View ${index + 1}`;
+    img.onclick = () => changeImage(imgSrc);
+    subImagesContainer.appendChild(img);
+  });
+}
+
+function updateProductDescription(product) {
+  const descriptionElement = document.getElementById("product-description");
+  descriptionElement.innerHTML = `
+    <p>${product.description}</p>
+    <ul class="features">
+      ${product.features.map(f => `<li>${f}</li>`).join("")}
+    </ul>
+  `;
+}
+
+function updateSizeOptions(product) {
+  const sizeButtonsContainer = document.getElementById("size-buttons");
+  sizeButtonsContainer.innerHTML = "";
+  
+  if (product.sizes && product.sizes.length > 0) {
+    product.sizes.forEach(size => {
+      const button = document.createElement("button");
+      button.className = "size-btn";
+      if (product.unavailableSizes && product.unavailableSizes.includes(size)) {
+        button.className += " unavailable";
+        button.title = "This size is currently unavailable";
+      }
+      button.textContent = size;
+      button.onclick = () => selectSize(size, button);
+      sizeButtonsContainer.appendChild(button);
     });
+  } else {
+    sizeButtonsContainer.innerHTML = '<p>One size fits all</p>';
+  }
+}
 
-    function initializeProductPage() {
-      // Get product ID from URL
-      const productId = getProductIdFromUrl();
-      
-      // Load product data
-      loadProduct(productId);
-      
-      // Set up UI components
-      setupImageZoom();
-      setupEventListeners();
+function setupImageZoom() {
+  const mainImage = document.getElementById("product-image");
+  const zoomOverlay = document.querySelector(".zoom-overlay");
+  
+  if (mainImage && zoomOverlay) {
+    mainImage.addEventListener("click", function() {
+      zoomOverlay.classList.add("active");
+    });
+    
+    zoomOverlay.addEventListener("click", function() {
+      this.classList.remove("active");
+    });
+  }
+}
+
+function setupEventListeners() {
+  const addToCartBtn = document.getElementById('add-to-cart-btn');
+  const buyNowBtn = document.getElementById('buy-now-btn');
+  const wishlistBtn = document.getElementById('wishlist-btn');
+  
+  if (addToCartBtn) addToCartBtn.addEventListener('click', addToCart);
+  if (buyNowBtn) buyNowBtn.addEventListener('click', buyNow);
+  if (wishlistBtn) wishlistBtn.addEventListener('click', addToWishlist);
+}
+
+// Image handling
+function changeImage(imageSrc) {
+  document.getElementById("product-image").src = imageSrc;
+  document.getElementById("zoomed-image").src = imageSrc;
+}
+
+// Size selection
+function selectSize(size, button) {
+  if (button.classList.contains("unavailable")) return;
+  
+  document.querySelectorAll(".size-btn").forEach(btn => {
+    btn.classList.remove("active");
+  });
+  
+  button.classList.add("active");
+  selectedSize = size;
+}
+
+// Cart functionality
+function addToCart() {
+  if (!currentProduct) {
+    showAlert("Product not loaded yet");
+    return;
+  }
+  
+  if (currentProduct.sizes && currentProduct.sizes.length > 0 && !selectedSize) {
+    showAlert("Please select a size first");
+    return;
+  }
+  
+  const productToAdd = createCartProduct(currentProduct, selectedSize);
+  updateCartWithProduct(productToAdd);
+  showAddToCartConfirmation();
+}
+
+function showAlert(message) {
+  alert(message);
+}
+
+function createCartProduct(product, size) {
+  return {
+    id: product.id,
+    title: product.title,
+    name: product.title,
+    price: product.price,
+    image: product.image,
+    size: size || 'One Size',
+    quantity: 1
+  };
+}
+
+function updateCartWithProduct(product) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+  const existingIndex = findProductInCart(cart, product);
+  
+  if (existingIndex !== -1) {
+    cart[existingIndex].quantity += 1;
+  } else {
+    cart.push(product);
+  }
+  
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartCount();
+}
+
+function findProductInCart(cart, product) {
+  return cart.findIndex(item => 
+    item.id === product.id && 
+    (item.size === product.size || (!item.size && !product.size))
+  );
+}
+
+function showAddToCartConfirmation() {
+  const cartBtnText = document.getElementById("cart-btn-text");
+  if (!cartBtnText) return;
+  
+  cartBtnText.innerHTML = `Added to Cart <span class="loading"></span>`;
+  
+  setTimeout(() => {
+    cartBtnText.textContent = "Added to Cart!";
+  }, 500);
+  
+  setTimeout(() => {
+    cartBtnText.textContent = "Add to Cart";
+  }, 2000);
+}
+
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+  
+  const cartCountElements = document.querySelectorAll('.cart-count');
+  if (cartCountElements) {
+    cartCountElements.forEach(el => {
+      el.textContent = totalItems;
+    });
+  }
+}
+
+function buyNow() {
+  addToCart();
+  setTimeout(() => {
+    window.location.href = "cart.html";
+  }, 500);
+}
+
+// Wishlist functionality
+function addToWishlist() {
+  if (!currentProduct) {
+    showAlert("Product not loaded yet");
+    return;
+  }
+  
+  const wishlistBtn = document.getElementById('wishlist-btn');
+  const productToAdd = createWishlistProduct(currentProduct);
+  const wishlist = getWishlist();
+  
+  const existingIndex = findProductInWishlist(wishlist, productToAdd.id);
+  
+  if (existingIndex !== -1) {
+    removeFromWishlist(wishlist, existingIndex, wishlistBtn);
+  } else {
+    addToWishlistArray(wishlist, productToAdd, wishlistBtn);
+  }
+  
+  updateWishlistCount();
+}
+
+function createWishlistProduct(product) {
+  return {
+    id: product.id,
+    title: product.title,
+    price: product.price,
+    image: product.image
+  };
+}
+
+function getWishlist() {
+  return JSON.parse(localStorage.getItem('wishlist')) || [];
+}
+
+function findProductInWishlist(wishlist, productId) {
+  return wishlist.findIndex(item => item.id === productId);
+}
+
+function removeFromWishlist(wishlist, index, button) {
+  wishlist.splice(index, 1);
+  updateWishlistButton(button, false);
+  showAlert(`${currentProduct.title} removed from wishlist`);
+  localStorage.setItem('wishlist', JSON.stringify(wishlist));
+}
+
+function addToWishlistArray(wishlist, product, button) {
+  wishlist.push(product);
+  updateWishlistButton(button, true);
+  showAlert(`${currentProduct.title} added to wishlist`);
+  localStorage.setItem('wishlist', JSON.stringify(wishlist));
+}
+
+function updateWishlistButton(button, isInWishlist) {
+  if (!button) return;
+  
+  if (isInWishlist) {
+    button.innerHTML = `
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="red" stroke="red">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+      </svg>
+      In Wishlist
+    `;
+  } else {
+    button.innerHTML = `
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+      </svg>
+      Add to Wishlist
+    `;
+  }
+}
+
+function checkWishlistStatus() {
+  if (!currentProduct) return;
+  
+  const wishlist = getWishlist();
+  const exists = findProductInWishlist(wishlist, currentProduct.id) !== -1;
+  const wishlistBtn = document.getElementById('wishlist-btn');
+  
+  updateWishlistButton(wishlistBtn, exists);
+}
+
+function updateWishlistCount() {
+  const wishlist = getWishlist();
+  const wishlistCountElements = document.querySelectorAll('.wishlist-count');
+  
+  if (wishlistCountElements) {
+    wishlistCountElements.forEach(el => {
+      el.textContent = wishlist.length;
+    });
+  }
+}
+
+// Share functionality
+function initializeShareFunctionality() {
+  const shareBtn = document.getElementById('share-btn');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', openShareModal);
+  }
+
+  document.addEventListener('click', function(e) {
+    const shareModal = document.getElementById('share-modal');
+    if (e.target === shareModal) {
+      shareModal.style.display = 'none';
     }
+  });
+}
 
-    function getProductIdFromUrl() {
-      const params = new URLSearchParams(window.location.search);
-      return params.get("id");
-    }
+function openShareModal() {
+  if (!currentProduct) return;
+  
+  const shareModal = document.getElementById('share-modal');
+  if (!shareModal) return;
 
-    // Load product data
-    function loadProduct(productId) {
-      const product = products[productId];
-      
-      if (!product) {
-        showProductNotFound();
-        return;
-      }
+  const shareLinkInput = document.getElementById('share-link-input');
+  if (shareLinkInput) {
+    const currentUrl = window.location.href.split('?')[0] + `?id=${currentProduct.id}`;
+    shareLinkInput.value = currentUrl;
+  }
 
-      currentProduct = product;
-      
-      updateProductInfo(product);
-      updateProductImages(product);
-      updateProductDescription(product);
-      updateSizeOptions(product);
-      checkWishlistStatus();
-    }
+  shareModal.style.display = 'flex';
+  setupSocialSharing(currentProduct.title, currentUrl);
+}
 
-    function showProductNotFound() {
-      document.querySelector(".container").innerHTML = `
-        <div style="padding: 40px; text-align: center;">
-          <h2>Product not found</h2>
-          <p>The requested product could not be found.</p>
-          <a href="index.html" style="color: #007bff;">Return to shop</a>
-        </div>
-      `;
-    }
+function setupSocialSharing(productTitle, productUrl) {
+  // Facebook
+  const facebookShare = document.getElementById('share-facebook');
+  if (facebookShare) {
+    facebookShare.addEventListener('click', function() {
+      window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(productUrl)}`, '_blank');
+    });
+  }
 
-    function updateProductInfo(product) {
-      document.getElementById("product-title").textContent = product.title;
-      document.getElementById("product-price").textContent = formatPrice(product.price);
-      
-      const oldPriceElement = document.getElementById("old-price");
-      if (product.oldPrice) {
-        oldPriceElement.textContent = formatPrice(product.oldPrice);
+  // Twitter
+  const twitterShare = document.getElementById('share-twitter');
+  if (twitterShare) {
+    twitterShare.addEventListener('click', function() {
+      const text = `Check out: ${productTitle}`;
+      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(productUrl)}`, '_blank');
+    });
+  }
+
+  // WhatsApp
+  const whatsappShare = document.getElementById('share-whatsapp');
+  if (whatsappShare) {
+    whatsappShare.addEventListener('click', function() {
+      const text = `Check out this product: ${productTitle} - ${productUrl}`;
+      window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+    });
+  }
+
+  // Copy link
+  const copyLinkBtn = document.getElementById('copy-link-btn');
+  if (copyLinkBtn) {
+    copyLinkBtn.addEventListener('click', function() {
+      const shareLinkInput = document.getElementById('share-link-input');
+      if (shareLinkInput) {
+        shareLinkInput.select();
+        document.execCommand('copy');
         
-        const discount = calculateDiscount(product.oldPrice, product.price);
-        const discountBadge = document.getElementById("discount-badge");
-        discountBadge.textContent = `${discount}% OFF`;
-        discountBadge.style.display = "inline-block";
-      } else {
-        oldPriceElement.style.display = "none";
+        const copySuccess = document.getElementById('copy-success');
+        if (copySuccess) {
+          copySuccess.style.display = 'block';
+          setTimeout(() => {
+            copySuccess.style.display = 'none';
+          }, 2000);
+        }
       }
-    }
+    });
+  }
 
-    function formatPrice(price) {
-      return `₹${price.toFixed(2)}`;
-    }
-
-    function calculateDiscount(oldPrice, currentPrice) {
-      return Math.round(((oldPrice - currentPrice) / oldPrice) * 100);
-    }
-
-    function updateProductImages(product) {
-      document.getElementById("product-image").src = product.image;
-      document.getElementById("zoomed-image").src = product.image;
-      
-      const subImagesContainer = document.getElementById("sub-images-container");
-      subImagesContainer.innerHTML = "";
-      
-      product.subImages.forEach((imgSrc, index) => {
-        const img = document.createElement("img");
-        img.src = imgSrc;
-        img.alt = `${product.title} - View ${index + 1}`;
-        img.onclick = () => changeImage(imgSrc);
-        subImagesContainer.appendChild(img);
-      });
-    }
-
-    function updateProductDescription(product) {
-      const descriptionElement = document.getElementById("product-description");
-      descriptionElement.innerHTML = `
-        <p>${product.description}</p>
-        <ul class="features">
-          ${product.features.map(f => `<li>${f}</li>`).join("")}
-        </ul>
-      `;
-    }
-
-    function updateSizeOptions(product) {
-      const sizeButtonsContainer = document.getElementById("size-buttons");
-      sizeButtonsContainer.innerHTML = "";
-      
-      if (product.sizes && product.sizes.length > 0) {
-        product.sizes.forEach(size => {
-          const button = document.createElement("button");
-          button.className = "size-btn";
-          if (product.unavailableSizes.includes(size)) {
-            button.className += " unavailable";
-            button.title = "This size is currently unavailable";
-          }
-          button.textContent = size;
-          button.onclick = () => selectSize(size, button);
-          sizeButtonsContainer.appendChild(button);
-        });
-      } else {
-        sizeButtonsContainer.innerHTML = '<p>One size fits all</p>';
+  // Close modal
+  const shareModalClose = document.getElementById('share-modal-close');
+  if (shareModalClose) {
+    shareModalClose.addEventListener('click', function() {
+      const shareModal = document.getElementById('share-modal');
+      if (shareModal) {
+        shareModal.style.display = 'none';
       }
-    }
-
-    function setupImageZoom() {
-      const mainImage = document.getElementById("product-image");
-      const zoomOverlay = document.querySelector(".zoom-overlay");
-      
-      mainImage.addEventListener("click", function() {
-        zoomOverlay.classList.add("active");
-      });
-      
-      zoomOverlay.addEventListener("click", function() {
-        this.classList.remove("active");
-      });
-    }
-
-    function setupEventListeners() {
-      document.getElementById('add-to-cart-btn').addEventListener('click', addToCart);
-      document.getElementById('buy-now-btn').addEventListener('click', buyNow);
-      document.getElementById('wishlist-btn').addEventListener('click', addToWishlist);
-    }
-
-    // Image handling
-    function changeImage(imageSrc) {
-      document.getElementById("product-image").src = imageSrc;
-      document.getElementById("zoomed-image").src = imageSrc;
-    }
-
-    // Size selection
-    function selectSize(size, button) {
-      if (button.classList.contains("unavailable")) return;
-      
-      document.querySelectorAll(".size-btn").forEach(btn => {
-        btn.classList.remove("active");
-      });
-      
-      button.classList.add("active");
-      selectedSize = size;
-    }
-
-    // Cart functionality
-    function addToCart() {
-      if (!currentProduct) {
-        showAlert("Product not loaded yet");
-        return;
-      }
-      
-      if (currentProduct.sizes && currentProduct.sizes.length > 0 && !selectedSize) {
-        showAlert("Please select a size first");
-        return;
-      }
-      
-      const productToAdd = createCartProduct(currentProduct, selectedSize);
-      updateCartWithProduct(productToAdd);
-      showAddToCartConfirmation();
-    }
-
-    function showAlert(message) {
-      alert(message);
-    }
-
-    function createCartProduct(product, size) {
-      return {
-        id: product.id,
-        title: product.title,
-        name: product.title,
-        price: product.price,
-        image: product.image,
-        size: size || 'One Size',
-        quantity: 1
-      };
-    }
-
-    function updateCartWithProduct(product) {
-      let cart = JSON.parse(localStorage.getItem('cart')) || [];
-      
-      const existingIndex = findProductInCart(cart, product);
-      
-      if (existingIndex !== -1) {
-        cart[existingIndex].quantity += 1;
-      } else {
-        cart.push(product);
-      }
-      
-      localStorage.setItem('cart', JSON.stringify(cart));
-      updateCartCount();
-    }
-
-    function findProductInCart(cart, product) {
-      return cart.findIndex(item => 
-        item.id === product.id && 
-        (item.size === product.size || (!item.size && !product.size))
-      );
-    }
-
-    function showAddToCartConfirmation() {
-      const cartBtnText = document.getElementById("cart-btn-text");
-      cartBtnText.innerHTML = `Added to Cart <span class="loading"></span>`;
-      
-      setTimeout(() => {
-        cartBtnText.textContent = "Added to Cart!";
-      }, 500);
-      
-      setTimeout(() => {
-        cartBtnText.textContent = "Add to Cart";
-      }, 2000);
-    }
-
-    function updateCartCount() {
-      const cart = JSON.parse(localStorage.getItem('cart')) || [];
-      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-      
-      const cartCountElements = document.querySelectorAll('.cart-count');
-      if (cartCountElements) {
-        cartCountElements.forEach(el => {
-          el.textContent = totalItems;
-        });
-      }
-    }
-
-    function buyNow() {
-      addToCart();
-      setTimeout(() => {
-        window.location.href = "cart.html";
-      }, 500);
-    }
-
-    // Wishlist functionality
-    function addToWishlist() {
-      if (!currentProduct) {
-        showAlert("Product not loaded yet");
-        return;
-      }
-      
-      const wishlistBtn = document.getElementById('wishlist-btn');
-      const productToAdd = createWishlistProduct(currentProduct);
-      const wishlist = getWishlist();
-      
-      const existingIndex = findProductInWishlist(wishlist, productToAdd.id);
-      
-      if (existingIndex !== -1) {
-        removeFromWishlist(wishlist, existingIndex, wishlistBtn);
-      } else {
-        addToWishlistArray(wishlist, productToAdd, wishlistBtn);
-      }
-      
-      updateWishlistCount();
-    }
-
-    function createWishlistProduct(product) {
-      return {
-        id: product.id,
-        title: product.title,
-        price: product.price,
-        image: product.image
-      };
-    }
-
-    function getWishlist() {
-      return JSON.parse(localStorage.getItem('wishlist')) || [];
-    }
-
-    function findProductInWishlist(wishlist, productId) {
-      return wishlist.findIndex(item => item.id === productId);
-    }
-
-    function removeFromWishlist(wishlist, index, button) {
-      wishlist.splice(index, 1);
-      updateWishlistButton(button, false);
-      showAlert(`${currentProduct.title} removed from wishlist`);
-      localStorage.setItem('wishlist', JSON.stringify(wishlist));
-    }
-
-    function addToWishlistArray(wishlist, product, button) {
-      wishlist.push(product);
-      updateWishlistButton(button, true);
-      showAlert(`${currentProduct.title} added to wishlist`);
-      localStorage.setItem('wishlist', JSON.stringify(wishlist));
-    }
-
-    function updateWishlistButton(button, isInWishlist) {
-      if (isInWishlist) {
-        button.innerHTML = `
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="red" stroke="red">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-          </svg>
-          In Wishlist
-        `;
-      } else {
-        button.innerHTML = `
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-          </svg>
-          Add to Wishlist
-        `;
-      }
-    }
-
-    function checkWishlistStatus() {
-      if (!currentProduct) return;
-      
-      const wishlist = getWishlist();
-      const exists = findProductInWishlist(wishlist, currentProduct.id) !== -1;
-      const wishlistBtn = document.getElementById('wishlist-btn');
-      
-      updateWishlistButton(wishlistBtn, exists);
-    }
-
-    function updateWishlistCount() {
-      const wishlist = getWishlist();
-      const wishlistCountElements = document.querySelectorAll('.wishlist-count');
-      
-      if (wishlistCountElements) {
-        wishlistCountElements.forEach(el => {
-          el.textContent = wishlist.length;
-        });
-      }
-    }
+    });
+  }
+}
 </script>
-<!-- JavaScript to handle badge updates -->
-<script>
-  // Initialize counters from localStorage or set to 0
-  let wishlistCount = localStorage.getItem('wishlistCount') || 0;
-  let cartCount = localStorage.getItem('cartCount') || 0;
-  
-  // Update badge displays
-  document.querySelector('.wishlist-badge').textContent = wishlistCount;
-  document.querySelector('.cart-badge').textContent = cartCount;
-  
-  // Function to update wishlist
-  function updateWishlist() {
-    wishlistCount++;
-    localStorage.setItem('wishlistCount', wishlistCount);
-    document.querySelector('.wishlist-badge').textContent = wishlistCount;
-    animateBadge('.wishlist-badge');
-  }
-  
-  // Function to update cart
-  function updateCart() {
-    cartCount++;
-    localStorage.setItem('cartCount', cartCount);
-    document.querySelector('.cart-badge').textContent = cartCount;
-    animateBadge('.cart-badge');
-  }
-  
-  // Add animation to badge when updated
-  function animateBadge(selector) {
-    const badge = document.querySelector(selector);
-    badge.style.transform = 'scale(1.5)';
-    setTimeout(() => {
-      badge.style.transform = 'scale(1)';
-    }, 300);
-  }
-  
-  // Connect to your existing buttons
-  document.getElementById('wishlist-btn').addEventListener('click', function(e) {
-    e.preventDefault();
-    updateWishlist();
-    // Your existing wishlist functionality here
-  });
-  
-  document.getElementById('add-to-cart-btn').addEventListener('click', function(e) {
-    e.preventDefault();
-    updateCart();
-    // Your existing add to cart functionality here
-  });
-  
-  document.getElementById('buy-now-btn').addEventListener('click', function(e) {
-    e.preventDefault();
-    updateCart();
-    // Redirect to checkout or your existing buy now functionality
-    window.location.href = 'cart.html';
-  });
-</script>
+
 </body>
 </html>
