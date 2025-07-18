@@ -19,16 +19,16 @@
         .coming-soon {
             height: 100%;
             background: 
-               
                 /* Your image - REPLACE THE URL WITH YOUR IMAGE PATH */
-                url('./IMAGES/HAIR\ BANNER.png') no-repeat center center;
-            background-size: cover;
+                url('./IMAGES/coming\ soon\ oy\ jewells\ banner\ hair.jpg') no-repeat center center;
+            background-size: contain;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             color: white;
             padding: 20px;
+            position: relative;
         }
 
         .content {
@@ -46,6 +46,32 @@
             margin-bottom: 30px;
         }
 
+        /* === Back Arrow === */
+        .back-arrow {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #ffffff;
+            font-size: 1.5rem;
+            background-color: #A91E4A;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .back-arrow:hover {
+            background-color: #A91E4A;
+            transform: translateX(-3px);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        }
+
         /* Mobile responsiveness */
         @media (max-width: 768px) {
             h1 {
@@ -59,7 +85,7 @@
 </head>
 <body>
     <div class="coming-soon">
-      
+        <a href="javascript:history.back()" class="back-arrow">←</a>
     </div>
 </body>
 </html>

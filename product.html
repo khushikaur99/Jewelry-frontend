@@ -664,22 +664,29 @@
       </a>
     </div>
     
-    <div class="header-icons">
-      <a href="wishlist.html" class="icon-link wishlist-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-        </svg>
-        <span class="badge wishlist-badge">0</span>
-      </a>
-      <a href="cart.html" class="icon-link cart-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="9" cy="21" r="1"></circle>
-          <circle cx="20" cy="21" r="1"></circle>
-          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-        </svg>
-        <span class="badge cart-badge">0</span>
-      </a>
-    </div>
+   <div class="header-icons">
+  <a href="wishlist.html" class="icon-link wishlist-icon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+    </svg>
+    <span class="badge wishlist-badge">0</span>
+  </a>
+  <a href="cart.html" class="icon-link cart-icon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="9" cy="21" r="1"></circle>
+      <circle cx="20" cy="21" r="1"></circle>
+      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+    </svg>
+    <span class="badge cart-badge">0</span>
+  </a>
+  <a href="javascript:void(0)" class="icon-link" id="header-share-btn">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+      <polyline points="16 6 12 2 8 6"></polyline>
+      <line x1="12" y1="2" x2="12" y2="15"></line>
+    </svg>
+  </a>
+</div>
     
     <!-- Left: Image Section -->
     <div class="image-section">
@@ -725,27 +732,18 @@
           <li>Free shipping on orders over $50</li>
         </ul>
       </div>
-
-      <div class="action-buttons">
-        <button class="add-to-cart" id="add-to-cart-btn">
-          <span id="cart-btn-text">Add to Cart</span>
-        </button>
-        <button class="buy-now" id="buy-now-btn">Buy Now</button>
-        <button class="wishlist-btn" id="wishlist-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="black" stroke="currentColor">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-          </svg>
-          Wishlist
-        </button>
-        <button class="share-btn" id="share-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
-            <polyline points="16 6 12 2 8 6"></polyline>
-            <line x1="12" y1="2" x2="12" y2="15"></line>
-          </svg>
-          Share
-        </button>
-      </div>
+<div class="action-buttons">
+  <button class="add-to-cart" id="add-to-cart-btn">
+    <span id="cart-btn-text">Add to Cart</span>
+  </button>
+  <button class="buy-now" id="buy-now-btn">Buy Now</button>
+  <button class="wishlist-btn" id="wishlist-btn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="black" stroke="currentColor">
+      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+    </svg>
+    Wishlist
+  </button>
+</div>
     </div>
   </div>
 
@@ -3612,6 +3610,107 @@ function setupSocialSharing(productTitle, productUrl) {
   }
 }
 </script>
+<script>
+// Share functionality
+function initializeShareFunctionality() {
+  const headerShareBtn = document.getElementById('header-share-btn');
+  if (headerShareBtn) {
+    headerShareBtn.addEventListener('click', openShareModal);
+  }
 
+  // Close modal when clicking outside
+  document.addEventListener('click', function(e) {
+    const shareModal = document.getElementById('share-modal');
+    if (e.target === shareModal) {
+      shareModal.style.display = 'none';
+    }
+  });
+}
+
+function openShareModal() {
+  if (!currentProduct) return;
+  
+  const shareModal = document.getElementById('share-modal');
+  if (!shareModal) return;
+
+  // Generate share URL with product ID
+  const currentUrl = window.location.href.split('?')[0] + `?id=${currentProduct.id}`;
+  
+  // Set share link input value
+  const shareLinkInput = document.getElementById('share-link-input');
+  if (shareLinkInput) {
+    shareLinkInput.value = currentUrl;
+  }
+
+  // Show modal
+  shareModal.style.display = 'flex';
+  
+  // Setup social sharing buttons
+  setupSocialSharing(currentProduct.title, currentUrl);
+}
+
+function setupSocialSharing(productTitle, productUrl) {
+  // Facebook Share
+  const facebookShare = document.getElementById('share-facebook');
+  if (facebookShare) {
+    facebookShare.onclick = () => {
+      window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(productUrl)}`, '_blank');
+    };
+  }
+
+  // Twitter Share
+  const twitterShare = document.getElementById('share-twitter');
+  if (twitterShare) {
+    twitterShare.onclick = () => {
+      const text = `Check out: ${productTitle}`;
+      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(productUrl)}`, '_blank');
+    };
+  }
+
+  // WhatsApp Share
+  const whatsappShare = document.getElementById('share-whatsapp');
+  if (whatsappShare) {
+    whatsappShare.onclick = () => {
+      const text = `Check out this product: ${productTitle} - ${productUrl}`;
+      window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+    };
+  }
+
+  // Copy Link
+  const copyLinkBtn = document.getElementById('copy-link-btn');
+  if (copyLinkBtn) {
+    copyLinkBtn.onclick = () => {
+      const shareLinkInput = document.getElementById('share-link-input');
+      if (shareLinkInput) {
+        shareLinkInput.select();
+        document.execCommand('copy');
+        
+        // Show success message
+        const copySuccess = document.getElementById('copy-success');
+        if (copySuccess) {
+          copySuccess.style.display = 'block';
+          setTimeout(() => {
+            copySuccess.style.display = 'none';
+          }, 2000);
+        }
+      }
+    };
+  }
+
+  // Close Modal Button
+  const shareModalClose = document.getElementById('share-modal-close');
+  if (shareModalClose) {
+    shareModalClose.onclick = () => {
+      const shareModal = document.getElementById('share-modal');
+      if (shareModal) {
+        shareModal.style.display = 'none';
+      }
+    };
+  }
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', initializeShareFunctionality);
+</script>
 </body>
 </html>
