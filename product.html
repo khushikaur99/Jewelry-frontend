@@ -3400,11 +3400,9 @@ function showAddToCartConfirmation() {
   
   setTimeout(() => {
     cartBtnText.textContent = "Added to Cart!";
-  }, 500);
+  }, 3000);
   
-  setTimeout(() => {
-    cartBtnText.textContent = "Add to Cart";
-  }, 2000);
+ 
 }
 
 function updateCartCount() {
@@ -3611,6 +3609,30 @@ function setupSocialSharing(productTitle, productUrl) {
 }
 </script>
 <script>
+
+  // Update Cart Count
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+  // Update all cart count elements
+  const cartCountElements = document.querySelectorAll('.cart-count, .cart-badge');
+  cartCountElements.forEach(el => {
+    el.textContent = totalItems;
+  });
+}
+
+// Update Wishlist Count
+function updateWishlistCount() {
+  const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+  
+  // Update all wishlist count elements
+  const wishlistCountElements = document.querySelectorAll('.wishlist-count, .wishlist-badge');
+  wishlistCountElements.forEach(el => {
+    el.textContent = wishlist.length;
+  });
+}
+
 // Share functionality
 function initializeShareFunctionality() {
   const headerShareBtn = document.getElementById('header-share-btn');
@@ -3712,5 +3734,9 @@ function setupSocialSharing(productTitle, productUrl) {
 // Initialize when page loads
 document.addEventListener('DOMContentLoaded', initializeShareFunctionality);
 </script>
+
+
+
+
 </body>
 </html>
